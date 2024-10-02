@@ -42,11 +42,34 @@ body #wrap-main{
 #wrap-body{
     position: relative;
     width: 940px;
-    background-color:blue;
+    /* background-color:blue; */
     margin: 0 auto;
 }
 #wrap-foot{
     width: 100%;
     background-color: aquamarine;
     
+}
+#wrap-body #wrap-side{
+    background-color: antiquewhite;
+    float: left;
+    width: 208px;
+    padding: 20px 0px 0px 0px;
+    
+}
+#wrap-body #wrap-main{
+    background-color: coral;
+    float: right;
+    width: 710px;
+
+}
+#wrap-body #top-title{
+    height: 28px;
+    background-color: crimson;
+    padding:20px 0px;
+    
+}
+#wrap-body #top-title h2{
+    display: inline;
+    vertical-align: bottom;
 }
