@@ -4,76 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Genie Music</title>
     <link rel="stylesheet" href="../../assets/css/all.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
-
 </head>
 
 <body>
     <div id="wrap-main">
-
         <div id="wrap-head">
-            <img src="/" alt="#">
-            <a href="#">이용권구매</a>
-            <div id="search-wrap">
-                <span class="logo">
-                    <img src="../../assets/images/logo_genie_5.0.png" alt="로고">
-                </span>
-                <input type="search" id="sc-fd" class="ipt-search placeholder" maxlength="200" autocomplete="off">
-                <input type="submit" class="btn-submit" value="검색">
-            </div>
-            <div class="gnb" id="gnb">
-                <ul class="menu clearfix">
-                    <li><a href="#" class="gnb-menu">지니차트</a></li>
-                    <li><a href="#" class="gnb-menu">최신음악</a></li>
-                    <li><a href="#" class="gnb-menu">장르음악</a></li>
-                </ul>
-                <div class="gnb-my">
-                    <div class="toggle-button-box login-box select-button">
-                        <button type="button" class="btn">로그인/회원가입</button>
-                        <div class="list">
-                            <div class="login-form">
-                                <a href="#" class="btn-login" title="새창 열림" onclick="loginPopup(); return false;"><span class="txt"><span class="hide">genie</span>로그인</span></a>
-                                <div class="btns clearfix">
-                                    <span class="find-account">
-                                        <a href="//member.genie.co.kr/account/find/confirm-id?svc=W">아이디 찾기</a>
-                                        <a href="//member.genie.co.kr/account/find/confirm-pw?svc=W">비밀번호 찾기</a>
-                                    </span>
-                                    <a href="//member.genie.co.kr/account/create/agree?svc=W" class="text-bold" style="float: right">회원가입</a>
-                                </div>
-                            </div>
-                            
-                            <ul class="list-login">
-                                <li><a href="#" class="btn-naver" onclick="$('#chk_long_main').hide(); $('#gnb_uxglk').prop('checked', false); loginNaver('https://nid.naver.com/oauth2.0/authorize?response_type=code&amp;client_id=tPsYxB_EN4GOavGIOe68&amp;redirect_uri=https%3A%2F%2Fwww.genie.co.kr%2Fauth%2FnaverCallback&amp;state=484986464403559631012187182818755929865'); return false;">네이버 로그인</a></li>
-                                <li><a href="#" class="btn-kakao" onclick="$('#chk_long_main').hide(); $('#gnb_uxglk').prop('checked', false); loginWithKakao(); return false;">카카오 로그인</a></li>
-                            </ul>
-                            <button type="button" class="btn-close close">닫기</button>
+            <div id="wrap-header">
+                <div id="purchase-button">
+                    <img src="../../assets/images/wallet.png">
+                    <a href="">이용권구매</a>
+                </div>
+                <div class="header-main">
+                    <div class="header-left">
+                        <span class="logo">
+                            <img src="../../assets/images/logo_genie_5.0.png" alt="로고">
+                        </span>
+                        <div id="search-wrap">
+                            <input type="search" id="sc-fd" class="ipt-search" maxlength="200" autocomplete="off"
+                                placeholder="가을에 듣기 좋은 감성 발라드">
+                            <input type="submit" class="btn-submit" value="검색">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="btn-menu">
-                <span class="icon-menu"></span>
-            </div>
-            <div class="btn-login">
-                <span class="icon-login"></span>
-            </div>
-        </div>
-        <div id="wrap-body">
-            <!--  -->
-        </div>
-        <div id="wrap-foot">
 
+                <div class="gnb" id="gnb">
+                    <ul class="menu clearfix">
+                        <li><a href="#" class="gnb-menu">지니차트</a></li>
+                        <li><a href="#" class="gnb-menu">최신음악</a></li>
+                        <li><a href="#" class="gnb-menu">장르음악</a></li>
+                    </ul>
+                    <div class="gnb-my">
+                        <button type="button" class="btn login-join-btn">로그인/회원가입</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="wrap-body">
+
+        </div>
+
+        <div id="wrap-foot">
             <div>푸터</div>
         </div>
+
     </div>
-
-
-
-
-
-
 </body>
 
 </html>

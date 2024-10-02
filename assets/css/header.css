@@ -1,55 +1,86 @@
 @charset "utf-8"; 
 
-#search-wrap {
-    padding-top: 15px;
-    margin-top: 10px;
+#wrap-header {
+    width: 940px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-bottom: 2px #d2d2d2 solid;
 }
 
-#wrap-head .gnb{
+#purchase-button {
+    padding: 0 5px 0 0;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+#search-wrap {
+    margin-left: 20px;
+}
+
+#sc-fd {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #0095FF;
+}
+
+.btn-submit {
+    float: right;
     position: relative;
-    width: 940px;
-    margin:0 auto;
+    width: 43px;
+    height: 36px;
+    border: 0;
+    line-height: 0;
+    background-image: url(../images/search.png) ;
+    text-indent: -9999px; /* 텍스트 숨김 */
+    cursor: pointer;
+}
+
+.gnb-my {
+    font-size: 14px;
+}
+
+.gnb-my .login-join-btn {
+    background-color: transparent;
+    color: #333;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#wrap-head .gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px;
 }
 
 #wrap-head .gnb .menu {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-#wrap-head .gnb .menu li{
-    float: left;
-    
-}
-
-#wrap-head .gnb .gnb-menu {
-    display: block;
-    position: absolute;
-    top: 15px;
-    left: 0;
-    /* background-color: #ffffff; */
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+#wrap-head .gnb .menu li {
+    margin-right: 30px;
 }
 
 #wrap-head .gnb .gnb-menu {
-    display: block;
-    position: relative;
-    padding: 0 27px 14px 0;
-    color: #27282d;
-    height: 24px;
     font-size: 18px;
-    font-family: "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
-    font-weight: 700;
+    color: #333;
+    font-weight: bold;
 }
-
-#wrap-head .gnb-my {
-    position: absolute;
-    bottom: 8px;
-    right: 0;
-}
-
-#wrap-head .gnb-my .toggle-button-box {
-    position: initial;
-    border: 0;
-    vertical-align: baseline;
-}
-
