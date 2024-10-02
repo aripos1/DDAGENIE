@@ -1,0 +1,55 @@
+@charset "utf-8"; 
+
+#search-wrap {
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+#wrap-head .gnb{
+    position: relative;
+    width: 940px;
+    margin:0 auto;
+}
+
+#wrap-head .gnb .menu {
+    display: block;
+}
+
+#wrap-head .gnb .menu li{
+    float: left;
+    
+}
+
+#wrap-head .gnb .gnb-menu {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    /* background-color: #ffffff; */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#wrap-head .gnb .gnb-menu {
+    display: block;
+    position: relative;
+    padding: 0 27px 14px 0;
+    color: #27282d;
+    height: 24px;
+    font-size: 18px;
+    font-family: "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
+    font-weight: 700;
+}
+
+#wrap-head .gnb-my {
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+}
+
+#wrap-head .gnb-my .toggle-button-box {
+    position: initial;
+    border: 0;
+    vertical-align: baseline;
+}
+
