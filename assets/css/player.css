@@ -134,7 +134,11 @@ body {
 }
 
 .tab-content {
-    display: none;
+    height: 300px; /* 높이를 고정, 필요에 따라 조정 */
+    overflow-y: auto; /* 내용이 넘치면 스크롤이 생기도록 설정 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .tab-content.active {
@@ -166,3 +170,70 @@ body {
 .logout-btn:hover {
     background-color: #d32f2f;
 }
+
+/* 재생목록과 마이뮤직에 공통 적용 */
+ul.playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 스크롤이 생기지 않는 상태에서 재생목록이 너무 크지 않게 함 */
+.playlist-footer {
+    margin-top: 10px;
+}
+
+
+        /* 스크롤 고정 및 레이아웃 관련 */
+        .tab-content {
+            height: 300px; /* 높이를 고정, 필요에 따라 조정 */
+            overflow-y: auto; /* 내용이 넘치면 스크롤이 생기도록 설정 */
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            display: none; /* 기본적으로 탭 콘텐츠는 보이지 않도록 설정 */
+        }
+
+        .tab-content.active {
+            display: block; /* 선택된 탭만 표시 */
+        }
+
+        /* 탭 버튼 스타일 */
+        .tab-header button {
+            padding: 10px;
+            border: none;
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        .tab-header button.active {
+            background-color: #ccc;
+            font-weight: bold;
+        }
+
+        /* 유저 정보 스타일 */
+        .user-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .user-id {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
