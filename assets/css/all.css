@@ -55,18 +55,18 @@ body #wrap-main{
 }
 #wrap-foot{
     width: 100%;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     
 }
 #wrap-body #wrap-side{
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     float: left;
     width: 208px;
     padding: 20px 0px 0px 0px;
     
 }
 #wrap-body #wrap-main{
-    background-color: coral;
+    /* background-color: coral; */
     float: right;
     width: 710px;
 
