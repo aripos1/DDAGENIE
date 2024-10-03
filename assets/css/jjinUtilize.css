@@ -166,3 +166,8 @@
     margin: 7px 0px  0px 93px;
     border-radius: 3px;
 }
+/*이용권 구매내역 타이틀 */
+#wrap-side #sy-goods-list-box{
+    background-color: #6bced4;
+    border: 3px #000000 solid;
+}
