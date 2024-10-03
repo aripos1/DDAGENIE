@@ -94,10 +94,15 @@ body {
 
 .like-icon {
     font-size: 40px;
-    color: #E7E9E7;
+    color: #E7E9E7; /* 기본 색 */
     cursor: pointer;
-
+    transition: color 0.3s ease;
 }
+
+.like-icon.liked {
+    color: red; /* 좋아요 클릭 시 빨간색으로 변경 */
+}
+
 
 .controls {
     width: 100%;

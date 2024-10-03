@@ -11,6 +11,10 @@
     padding: 0 5px 0 0;
 }
 
+#wrap-header>#purchase-button>.headBuy{
+    font-size: 12px;
+}
+
 #wrap-header>.header-main {
     display: flex;
     justify-content: space-between;
@@ -67,6 +71,17 @@
     border: none;
     cursor: pointer;
     font-weight: bold;
+}
+#wrap-header>.gnb>.gnb-my {
+    float: right;  
+}
+
+#wrap-header>.gnb>.gnb-my>li {
+    float: left; margin: 25px 0px 0px 10px;
+}
+
+#wrap-header>.gnb>.gnb-my>li .login-join-btn {
+    padding: 4px 6px 4px 6px; font-size: 14px; 
 }
 
 #wrap-header>.gnb {
