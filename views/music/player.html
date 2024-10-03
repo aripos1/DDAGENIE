@@ -6,14 +6,7 @@
     <title>Music Player</title>
     <link rel="stylesheet" href="../../assets/css/player.css">
     <style>
-        .now-playing {
-            font-weight: bold;
-            color: #007BFF;
-        }
-        .popup-player {
-            width: 1000px; /* 플레이어 너비 */
-            height: 500px; /* 플레이어 높이 */
-        }
+
     </style>
 </head>
 
@@ -144,19 +137,19 @@
             myMusicContent.classList.add('active');
             playlistContent.classList.remove('active');
         });
-            // 팝업 창 열기
-            function openPlayerPopup() {
-            const popupWidth = 1000; // 팝업 너비
+        // 팝업 창 열기
+        function openPlayerPopup() {
+            const popupWidth = 500; // 팝업 너비
             const popupHeight = 500; // 팝업 높이
             const popupOptions = `width=${popupWidth},height=${popupHeight},resizable=yes,scrollbars=no`;
             window.open('your_player_page.html', 'Music Player', popupOptions);
         }
-    
+
 
         // 페이지 로드 시 초기화
         loadPlaylist();
     </script>
-        <button onclick="openPlayerPopup()">팝업 플레이어 열기</button>
+    <button onclick="openPlayerPopup()">팝업 플레이어 열기</button>
 </body>
 
 </html>

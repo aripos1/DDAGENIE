@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../assets/css/all.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">`
+    <link rel="stylesheet" href="../../assets/css/index.css">
+
+    <title>메인페이지</title>
+</head>
+
+<body>
+    <div id="wrap-main">
+        <div id="wrap-head">
+            <div id="wrap-header">
+                <div id="purchase-button">
+                    <img src="../../assets/images/wallet.png">
+                    <a href="">이용권구매</a>
+                </div>
+                <div class="header-main">
+                    <div class="header-left">
+                        <span class="logo">
+                            <img src="../../assets/images/logo_genie_5.0.png" alt="로고">
+                        </span>
+                        <div id="search-wrap">
+                            <input type="search" id="sc-fd" class="ipt-search" maxlength="200" autocomplete="off"
+                                placeholder="가을에 듣기 좋은 감성 발라드">
+                            <input type="submit" class="btn-submit" value="검색">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gnb" id="gnb">
+                    <ul class="menu clearfix">
+                        <li><a href="#" class="gnb-menu">지니차트</a></li>
+                        <li><a href="#" class="gnb-menu">최신음악</a></li>
+                        <li><a href="#" class="gnb-menu">장르음악</a></li>
+                    </ul>
+                    <div class="gnb-my">
+                        <button type="button" class="btn login-join-btn">로그인/회원가입</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--배너 (이프문 돌리기)-->
+        <div id="wrap">
+            <div class="banner-container">
+                <h2>최신음악</h2>
+                <div class="category">
+                    <span class="active">종합</span>
+                    <span>국내</span>
+                    <span>국외</span>
+                </div>
+
+                <div class="banner">
+                    <div class="banner-item">
+                        <a href="../jung.png">
+                            <img src="../jung.png" alt="harry kim (해리킴)">
+                            <div class="banner-caption">harry kim (해리킴)</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link2.html">
+                            <img src="cover2.jpg" alt="김아름">
+                            <div class="banner-caption">김아름</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link3.html">
+                            <img src="cover3.jpg" alt="브로콜리너마저">
+                            <div class="banner-caption">브로콜리너마저</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link4.html">
+                            <img src="cover4.jpg" alt="Sunburnkids">
+                            <div class="banner-caption">Sunburnkids</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link5.html">
+                            <img src="cover5.jpg" alt="Tuesday Beach Club">
+                            <div class="banner-caption">Tuesday Beach Club</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link6.html">
+                            <img src="cover6.jpg" alt="태비 (Taeb2)">
+                            <div class="banner-caption">태비 (Taeb2)</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link7.html">
+                            <img src="cover7.jpg" alt="인순이">
+                            <div class="banner-caption">인순이</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link8.html">
+                            <img src="cover8.jpg" alt="ArchPlot (아크플롯)">
+                            <div class="banner-caption">ArchPlot (아크플롯)</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link9.html">
+                            <img src="cover9.jpg" alt="SEODo BAND (서도밴드)">
+                            <div class="banner-caption">SEODo BAND (서도밴드)</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link10.html">
+                            <img src="cover10.jpg" alt="허클베리핀 (Huckleberryfinn)">
+                            <div class="banner-caption">허클베리핀 (Huckleberryfinn)</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link11.html">
+                            <img src="cover11.jpg" alt="bvyinyl">
+                            <div class="banner-caption">bvyinyl</div>
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="link12.html">
+                            <img src="cover12.jpg" alt="20WAVE">
+                            <div class="banner-caption">20WAVE</div>
+                        </a>
+                    </div>
+                </div>
+                <!--배너-->
+
+                <!--배너 페이징-->
+                <div class="pagination">
+                    <span>&#60;</span>
+                    <span>1 / 5</span>
+                    <span>&#62;</span>
+                </div>
+                <!--배너 페이징-->
+            </div>
+            <!--배너부분-->
+            <!--리스트부분-->
+            <h2>음악 리스트</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>곡 정보</th>
+                        <th>재생/추가/담기/다운</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--리스트 반복부분-->
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="song-info">
+                                <img src="cover1.jpg" alt="BOOMERANG" class="song-cover">
+                                <div>
+                                    <div class="song-title">BOOMERANG</div>
+                                    <div>20WAVE | BOOMERANG</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="buttons">
+                                <button class="btn play-btn">▶ 재생</button>
+                                <button class="btn">+ 추가</button>
+                                <button class="btn">담기</button>
+                                <button class="btn">⬇ 다운</button>
+                            </div>
+                        </td>
+                    </tr><!--리스트 반복부분 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
