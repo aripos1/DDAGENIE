@@ -1,0 +1,190 @@
+#wrap-header {
+    width: 100%; /* 너비를 100%로 설정하여 고정 너비 제거 */
+    max-width: 940px; /* 최대 너비는 940px로 고정 */
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/* 테이블 스타일 */
+#playlist {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#playlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#playlist-table th,
+#playlist-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#playlist-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+#playlist-table td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+}
+
+.song-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.song-info div p:first-child {
+    font-weight: bold;
+}
+
+/* 버튼 스타일 */
+#playlist-table button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#playlist-table button:hover {
+    background-color: #0056b3;
+}
+
+/* 액션 버튼 스타일 */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+/* Top Category List Styling */
+#top-ct-list {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.tab-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-list li {
+    display: inline-block;
+    margin: 0;
+}
+
+.tab-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #f7f7f7;
+}
+
+.tab-link.active {
+    background-color: #558ABF;
+    /* 파란색 */
+    color: #fff;
+    border-bottom: none;
+}
+
+.tab-link:hover {
+    background-color: #717578;
+    /* 중간 회색 */
+    color: #fff;
+}
+
+#wrap-likes {
+    margin-top: 20px;
+}
+
+#likes-table th,
+#likes-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#likes-table .song-info {
+    display: flex;
+    align-items: center;
+}
+
+#likes-table img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* 탭이 활성화되었을 때 스타일 */
+.top-menu-item.active,
+.menu-item.active {
+
+    font-weight: bold;
+    /* 활성화된 탭 글씨 굵게 */
+    padding-bottom: 5px;
+    /* 밑줄에 여백을 줘서 탭이 더 깔끔하게 보이게 함 */
+}
+
