@@ -1,12 +1,12 @@
 /*배너 css*/
-body {
+#wrap-main {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f9f9f9;
 }
 
-h2 {
+#wrap>.banner-container>h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
