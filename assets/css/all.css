@@ -25,11 +25,19 @@ a:hover {text-decoration: none; color: #000000; }
 
 
 /*************************************************************/
+body{
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 100vh; /* 화면 높이의 100% */
+}
+
 
 body #wrap-main{
     /* background-color:#333; */
     width: 1000px;
-    background-color: #000000;
+    /* background-color: #000000; */
+    
 }
 #wrap-head{
     width: 100%;
@@ -65,7 +73,7 @@ body #wrap-main{
 }
 #wrap-body #top-title{
     height: 28px;
-    background-color: crimson;
+    /*background-color: crimson;*/
     padding:20px 0px;
     
 }
