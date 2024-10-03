@@ -11,12 +11,10 @@
 <body>
     <div class="popup-player">
         <div class="player-left">
-            <!-- 로고 -->
+            <!-- 로고 및 음악 정보 -->
             <div class="logo">
                 <img src="../../assets/images/logo.webp" alt="logo" style="height: 50px;">
             </div>
-    
-            <!-- 앨범 커버, 곡 제목, 가수 이름 -->
             <div class="album-info">
                 <div class="info-container">
                     <div class="track-details">
@@ -27,35 +25,30 @@
                         <span>&hearts;</span>
                     </div>
                 </div>
-                <img src="../../assets/images/공포 루피.jfif" alt="Album Cover" class="album-cover">
+                <img src="../../assets/images/album-cover.png" alt="Album Cover" class="album-cover">
             </div>
-    
             <!-- 음악 컨트롤러 -->
             <audio id="audio-player" controls>
                 <source id="audio-source" src="../../assets/musicfile/Color_Out_-_Host.mp3" type="audio/mp3">
             </audio>
         </div>
-    
+
         <div class="playlist-right">
             <div class="user-info">
                 <span class="user-id">로그인하세요 ></span>
-                <span>FAQ | 이용안내</span>
+                <button>로그아웃</button>
             </div>
-    
+
             <!-- 탭 버튼들 -->
             <div class="tab-header">
                 <button id="playlist-tab" class="tab-button active">재생목록 (2)</button>
                 <button id="my-music-tab" class="tab-button">마이뮤직</button>
             </div>
-    
-            <!-- 재생목록 -->
+
+            <!-- 재생목록 탭 콘텐츠 -->
             <div id="playlist-content" class="tab-content active">
                 <div class="playlist-controls">
                     <button>중복곡 삭제</button>
-                    <button>재생목록 동기화</button>
-                    <select>
-                        <option>추가순</option>
-                    </select>
                 </div>
                 <ul class="playlist" id="playlist">
                     <li>
@@ -73,51 +66,99 @@
                         </div>
                     </li>
                 </ul>
+
+                <!-- 재생목록 푸터 -->
                 <div class="playlist-footer">
-                    <button>담기</button>
-                    <button>다운</button>
-                    <button>삭제</button>
+                    <button id="add-to-my-music">담기</button>
+                    <button id="delete-from-playlist">삭제</button>
                     <div class="footer-pagination">
                         <p>0곡 / 2곡</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 마이뮤직 -->
+            <!-- 마이뮤직 탭 콘텐츠 -->
             <div id="my-music-content" class="tab-content">
                 <ul class="playlist" id="my-music">
                     <li><input type="checkbox"> 나의 음악 1</li>
                     <li><input type="checkbox"> 나의 음악 2</li>
                     <li><input type="checkbox"> 나의 음악 3</li>
                 </ul>
+
+                <!-- 마이뮤직 푸터 -->
                 <div class="playlist-footer">
-                    <button>삭제</button>
-                    <p>0곡 / 3곡</p>
+                    <button id="delete-from-my-music">삭제</button>
+                    <div class="footer-pagination">
+                        <p>0곡 / 3곡</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        const playlistTab = document.getElementById('playlist-tab');
-        const myMusicTab = document.getElementById('my-music-tab');
-        const playlistContent = document.getElementById('playlist-content');
-        const myMusicContent = document.getElementById('my-music-content');
-        const playlist = document.getElementById('playlist');
-        const currentSongDisplay = document.getElementById('current-song');
-        const audioPlayer = document.getElementById('audio-player');
-        const audioSource = document.getElementById('audio-source');
-        const volumeSlider = document.getElementById('volume-slider');
-        const songCount = document.getElementById('song-count');
-        const tabs = document.querySelectorAll('.tab-button');
-        const contents = document.querySelectorAll('.tab-content');
+        // 탭 전환 기능
+        document.addEventListener('DOMContentLoaded', function () {
+            const playlistTab = document.getElementById('playlist-tab');
+            const myMusicTab = document.getElementById('my-music-tab');
+            const playlistContent = document.getElementById('playlist-content');
+            const myMusicContent = document.getElementById('my-music-content');
+            const addToMyMusicButton = document.getElementById('add-to-my-music');
+            const deleteFromPlaylistButton = document.getElementById('delete-from-playlist');
+            const deleteFromMyMusicButton = document.getElementById('delete-from-my-music');
+
+            // 탭 전환 기능
+            playlistTab.addEventListener('click', function () {
+                playlistTab.classList.add('active');
+                myMusicTab.classList.remove('active');
+                playlistContent.classList.add('active');
+                myMusicContent.classList.remove('active');
+            });
+
+            myMusicTab.addEventListener('click', function () {
+                myMusicTab.classList.add('active');
+                playlistTab.classList.remove('active');
+                myMusicContent.classList.add('active');
+                playlistContent.classList.remove('active');
+            });
+
+            // 담기 버튼 클릭 시 마이뮤직에 추가
+            addToMyMusicButton.addEventListener('click', function () {
+                const selectedSongs = document.querySelectorAll('#playlist input[type="checkbox"]:checked');
+                const myMusicList = document.getElementById('my-music');
+                selectedSongs.forEach(function (song) {
+                    const songDetails = song.nextElementSibling.innerHTML;
+                    const li = document.createElement('li');
+                    li.innerHTML = `<input type="checkbox"> ${songDetails}`;
+                    myMusicList.appendChild(li);
+                });
+            });
+
+            // 재생목록 삭제 기능
+            deleteFromPlaylistButton.addEventListener('click', function () {
+                const selectedSongs = document.querySelectorAll('#playlist input[type="checkbox"]:checked');
+                selectedSongs.forEach(function (song) {
+                    song.parentElement.remove();
+                });
+            });
+
+            // 마이뮤직 삭제 기능
+            deleteFromMyMusicButton.addEventListener('click', function () {
+                const selectedSongs = document.querySelectorAll('#my-music input[type="checkbox"]:checked');
+                selectedSongs.forEach(function (song) {
+                    song.parentElement.remove();
+                });
+            });
+        });
 
         // 음량 슬라이더 값 변경 시 실행되는 함수
-        volumeSlider.addEventListener('input', function () {
+        const volumeSlider = document.getElementById('volume-slider');
+        volumeSlider?.addEventListener('input', function () {
+            const audioPlayer = document.getElementById('audio-player');
             audioPlayer.volume = volumeSlider.value;
         });
 
-        // Mock 데이터 (나중에 실제 API로 대체 가능)
+        // 재생 목록 생성 (Mock 데이터)
         const songs = [
             { id: 1, title: "HAPPY", artist: "DAY6", url: "song1.mp3" },
             { id: 2, title: "Welcome to the Show", artist: "DAY6", url: "song2.mp3" },
@@ -126,64 +167,15 @@
             { id: 5, title: "소나기", artist: "이클립스", url: "song5.mp3" }
         ];
 
-        // 재생 목록 생성
+        // 재생 목록 로드 함수
         function loadPlaylist() {
+            const playlist = document.getElementById('playlist');
             playlist.innerHTML = ''; // 초기화
             songs.forEach((song, index) => {
                 const li = document.createElement('li');
                 li.innerHTML = `<input type="checkbox"> ${song.title} - ${song.artist} <button data-index="${index}" class="play-btn">재생</button>`;
                 playlist.appendChild(li);
             });
-            updateSongCount();
-        }
-
-        // 노래 재생
-        function playSong(index) {
-            const song = songs[index];
-            audioSource.src = song.url;
-            audioPlayer.load();
-            audioPlayer.play();
-            currentSongDisplay.textContent = `${song.title} - ${song.artist}`;
-        }
-
-        // 재생 버튼 클릭 이벤트
-        playlist.addEventListener('click', function (e) {
-            if (e.target.classList.contains('play-btn')) {
-                const index = e.target.getAttribute('data-index');
-                playSong(index);
-            }
-        });
-
-        // 탭 전환 기능
-        tabs.forEach((tab, index) => {
-            tab.addEventListener('click', function () {
-                // 모든 탭에서 active 클래스를 제거
-                tabs.forEach((tab) => tab.classList.remove('active'));
-                contents.forEach((content) => content.classList.remove('active'));
-
-                // 클릭된 탭과 관련된 콘텐츠에 active 클래스 추가
-                tab.classList.add('active');
-                contents[index].classList.add('active');
-            });
-        });
-
-        myMusicTab.addEventListener('click', function () {
-            myMusicTab.classList.add('active');
-            playlistTab.classList.remove('active');
-
-            myMusicContent.classList.add('active');
-            playlistContent.classList.remove('active');
-        });
-
-        // 음량 슬라이더 변경 시
-        volumeSlider.addEventListener('input', function () {
-            audioPlayer.volume = volumeSlider.value;
-        });
-
-        // URL에서 쿼리 파라미터 읽어오기
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
         }
 
         // 페이지 로드 시 재생 목록 로드
