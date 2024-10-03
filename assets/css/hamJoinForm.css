@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+#join-header {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#join-header>.logo, .join-nav {
+    margin: 30px 50px;
+}
+
+#join-header>.logo img {
+    width: 40px; /* 로고 크기 조정 */
+    height: auto;
+}
+
+#join-header>.join-nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#join-header>.join-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#join-header>.join-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#join-header>.join-nav ul li a {
+    text-decoration: none;
+    color: #252525; 
+    font-size: 14px;
+}
+
+#join-header>.join-nav ul li a:hover {
+    color: #2C2A34; /* 어두운 보라색 */
+}
+
+/* 정보 입력 섹션 스타일 */
+.joinForm>.intro-text>h2 {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* 폼 컨테이너 */
+.joinForm>.joinform-container {
+    width: 400px;
+    margin: 5px auto 20px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.joinForm>.joinform-container .joinform-group {
+    margin-bottom: 20px;
+}
+
+.joinForm>.joinform-container .joinform-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.joinForm>.joinform-container .joinform-group input {
+    width: 375px; 
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: #fafafa;
+    color: #252525;
+}
+
+.joinForm>.joinform-container .joinform-group>.input-group {
+    display: flex;
+}
+
+.joinForm>.joinform-container .joinform-group>.input-group input {
+    flex-grow: 1;
+}
+
+/* 버튼 스타일 */
+.joinForm>.joinform-container .joinform-group>.input-group .joinchk-btn {
+    padding: 12px;
+    background-color: #EEEEEF; 
+    color: #BCBCBC;
+    border: none;
+    border-radius: 10px;
+    cursor: default;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.joinForm>.joinform-container .joinform-group>.input-group .joinchk-btn:hover {
+    background-color: #e2e2e2; 
+}
+
+.joinForm>.joinform-container .joinform-group>.joinsubmit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #EEEEEF;
+    color: #bcbcbc;
+    border: none;
+    border-radius: 10px;
+    cursor: default;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.joinForm>.joinform-container .joinform-group>.joinsubmit-btn:hover {
+    background-color: #e2e2e2; 
+}
+
+/* 푸터 스타일 */
+.joinForm>footbar ul {
+    font-size: 12px;
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.joinForm>footbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.joinForm>footbar ul li a {
+    color: #252525; 
+    text-decoration: none;
+}
+
+.joinForm>footbar ul li a:hover {
+    color: #2C2A34;
+    cursor: default;
+}
+
+.joinForm>footbar p {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
