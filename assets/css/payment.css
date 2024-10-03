@@ -78,7 +78,8 @@
     font-size: 24px;
     font-weight: bold;
     padding-top: 20px;
-    padding-left: 10px;
+    padding-left: 15px;
+    color: #ffffff;
 }
 
 /*금액, 구매하기버튼*/
@@ -100,4 +101,5 @@
     font-weight: bold;
     margin-right: 40px;
     padding-top: 7px;
+    color: #ffffff;
 }
