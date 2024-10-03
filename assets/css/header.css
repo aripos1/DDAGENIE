@@ -4,7 +4,7 @@
     width: 940px;
     background-color: #ffffff;
     margin: 0 auto;
-    border-bottom: 2px #d2d2d2 solid;
+    /* border-bottom: 2px #d2d2d2 solid; */
 }
 
 #wrap-header>#purchase-button {
