@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/*타이틀*/
+#top-title p{
+    font-size: 11px;
+    float: right;
+    /*background-color: #85cbd2;*/
+    margin-top: 18px;
+}
+#top-title{
+    width: 940px;
+    /* background-color: aquamarine; */
+    border-bottom: 2px #cacad0 solid;
+}
+
+/*결제 정보 창*/
+#smart-music-listen #pay-total-list{
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 20px;
+    border: 2px #cacad0 solid;
+    border-radius: 20px;
+}
+#smart-music-listen #pay-total-list td{
+    padding: 15px 0px;
+}
+
+#smart-music-listen #pay-total-list .tb-total{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 15px;
+    border-bottom: 1px #cacad0 solid;
+}
+/*테이블별 글꼴*/
+#smart-music-listen #pay-total-list .tb-one{
+    color: black;
+}
+#smart-music-listen #pay-total-list .tb-two{
+    color: rgb(255, 0, 0);
+}
+#smart-music-listen #pay-total-list .tb-three{
+    color: rgb(33, 33, 255);
+}
+
+/*금액모음*/
+#smart-music-listen #pay-total-list .pay-one-two{
+    font-weight: bold;
+    font-size: 20px;
+}
+#smart-music-listen #pay-total-list .pay-two-two{
+    font-weight: bold;
+    font-size: 20px;
+}
+#smart-music-listen #pay-total-list .pay-three-two{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*결제버튼*/
+#total-price-btn{
+    padding: 10px 60px;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: rgb(37, 146, 255);
+    border: none;
+    border-radius: 3px;
+    color: azure;
+    margin-left: 370px;
+}
