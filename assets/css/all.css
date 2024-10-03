@@ -57,6 +57,7 @@ body #wrap-main{
 #wrap-foot{
     width: 100%;
     /* background-color: aquamarine; */
+    margin-top: 80px;
     
 }
 #wrap-body #wrap-side{
