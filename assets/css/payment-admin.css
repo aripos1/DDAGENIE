@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+#top-title{
+    border-bottom: 2px #dedede solid;
+}
+
+#top-title p{
+    font-size: 11px;
+    float: right;
+    /*background-color: #85cbd2;*/
+    margin-top: 18px;
+}
+
 /* ## side 프로필창 ## */
 #profile-box{
     width: 208px;
@@ -97,96 +108,32 @@
     width: 10px;
 }
 
-/* 이용권 상세내역, 취소신청 카테고리*/
-#top-title p{
-    font-size: 11px;
-    float: right;
-    /*background-color: #85cbd2;*/
-    margin-top: 18px;
-}
-#top-ct-list div{
-    background-color: darkkhaki;
-}
-
-#top-ct-list{
-    /* background-color: darkkhaki; */
-    border-top: 2px #656565 solid;
-}
-#top-ct-list li{
-    float: left;
-    border-right: 1px #D5D5D5 solid;
-    border-bottom: 1px #D5D5D5 solid;
-    text-align: center;
-    font-weight: bold;
-    padding: 12px 17px;
-    margin-bottom: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-}
-
-/* 이용권 */
-#date-box{
-    /* background-color: #4690f6; */
-    padding-bottom: 30px;
-    margin-top: 10px;
-}
-#date-coupon{
-    /* background-color: blueviolet; */
-    width: 330px;
-    /* margin-left: 10px; */
-    border-right: 2px #D5D5D5 solid;
-    border-left: 2px #D5D5D5 solid;
-    border-bottom: 3px #747474 solid;
-    height: 120px;
-}
-#date-box #coupon-title{
-    background-color: #747474;
-    height: 23px;
-    text-align: center;
-    padding: 5px 0px;
-    color: #EAEAEA;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-}
-
-#date-coupon #coupon-count{
-    text-align: center;
-    padding-top: 18px;
-}
-#date-coupon #coupon-count span{
-    color: #e10000;
+/*############################*/
+#admin-all-list-title{
     font-weight: bold;
     font-size: 18px;
-}
-#date-coupon #coupon-count p{
-    font-size: 13px;
-    border: 1px #656565 solid;
-    width: 130px;
-    padding: 3px 5px;
-    margin: 7px 0px  0px 93px;
-    border-radius: 3px;
-}
-/*이용권 구매내역 타이틀 */
-#sy-goods-list-box{
-    /* background-color: #85cbd2; */
-    padding-bottom: 22px;
-    padding-top: 10px;
-
-}
-#sy-goods-list-table #list-table{
-    /* border-top: 1px #999 solid; */
-    border-top: 1px #D5D5D5 solid;
-    border-bottom: 1px #D5D5D5 solid;
-    font-size: 13px;
-    margin-bottom: 50px;
-}
-#sy-goods-list-table #list-table th{
-    border-bottom: 1px #D5D5D5 solid;
-    padding:3px 0px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
     
 }
-#sy-goods-list-table #list-table td{
+
+#admin-table-delete-list{
     text-align: center;
-    padding: 5px 0px;
+    margin-left: 13px;
 }
 
+#admin-table-delete-list th,td{
+    border: 1px #D5D5D5 solid;
+    padding: 5px 8px;
+}
+#admin-table-delete-list td button{
+    padding: 5px 15px;
+    background-color: #e6e6e6;
+    border: 1px #ffffff solid;
+    border-radius: 3px;
+}
+
+#admin-table-delete-list th{
+    background-color: #D5D5D5;
+}

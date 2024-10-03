@@ -114,14 +114,14 @@
 }
 #top-ct-list li{
     float: left;
-    border-right: 1px #656565 solid;
-    border-bottom: 1px #656565 solid;
+    border-right: 1px #D5D5D5 solid;
+    border-bottom: 1px #D5D5D5 solid;
     text-align: center;
     font-weight: bold;
     padding: 12px 17px;
     margin-bottom: 30px;
     font-family: 'Roboto', sans-serif;
-    background-color: #EAEAEA;
+    background-color: #f9f9f9;
 }
 
 /* 해지신청표*/
@@ -166,3 +166,5 @@
     color: #656565
     
 }
+
+

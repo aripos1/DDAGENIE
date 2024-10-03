@@ -123,6 +123,7 @@
     border-radius: 4px;
     margin-bottom: 10px;
     font-size: 14px;
+    resize: none;
   }
   
   .comment-submit-button {
@@ -151,3 +152,10 @@
     margin-left: 10px;
     color: #999;
   }
+
+  /* 좋아요 수 표시 */
+.like-count {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
