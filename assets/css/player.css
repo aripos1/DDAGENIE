@@ -39,8 +39,8 @@ body {
 }
 
 .album-cover {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
