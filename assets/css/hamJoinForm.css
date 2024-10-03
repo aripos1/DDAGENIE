@@ -225,7 +225,7 @@ footbar p {
 
 /* 로그인 그룹 스타일 */
 .login-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .login-group label {
@@ -233,6 +233,7 @@ footbar p {
     margin-bottom: 8px;
     font-size: 14px;
     color: #333;
+    padding: 11px 33px;
 }
 
 .login-group input {
@@ -250,14 +251,14 @@ footbar p {
 .checkbox-container {
     position: relative;
     padding-right: 30px;
-    margin-top: 20px;
+    vertical-align:auto;
 }
 
 .checkbox-container>.inp_check {
     position: absolute;
-    left: 0;
-    width: 20px;
-    height: 20px;
+    left: 10px;
+    width: 14px;
+    height: 19px;
     top: 1px;
 }
 
