@@ -91,6 +91,21 @@
     flex-grow: 1;
 }
 
+.joinform-group>li, #tos{
+    width: 20px;
+    list-style-type: none;
+    margin-top: 10px;
+    display: flex;
+}
+
+.joinform-group>#agree>label{
+    padding-left: 15px;
+    flex: none;
+    height: 15px;
+    width: 200px;
+    margin-top: 14px;
+}
+
 /* 버튼 스타일 */
 .joinForm>.joinform-container .joinform-group>.input-group .joinchk-btn {
     padding: 12px;
