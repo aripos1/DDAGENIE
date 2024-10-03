@@ -15,11 +15,11 @@
             <div class="logo">
                 <img src="../../assets/images/logo.webp" alt="logo" style="height: 50px;">
             </div>
-
+    
             <!-- 앨범 커버, 곡 제목, 가수 이름 -->
             <div class="album-info">
-                <div class="clearfix">
-                    <div>
+                <div class="info-container">
+                    <div class="track-details">
                         <h2>곡 제목</h2>
                         <p>가수 이름</p>
                     </div>
@@ -28,36 +28,58 @@
                     </div>
                 </div>
                 <img src="../../assets/images/공포 루피.jfif" alt="Album Cover" class="album-cover">
-
             </div>
-
+    
             <!-- 음악 컨트롤러 -->
             <audio id="audio-player" controls>
                 <source id="audio-source" src="../../assets/musicfile/Color_Out_-_Host.mp3" type="audio/mp3">
             </audio>
         </div>
-
+    
         <div class="playlist-right">
             <div class="user-info">
-                <span class="user-id">ihs*** 님</span>
-                <button class="logout-btn">로그아웃</button>
+                <span class="user-id">로그인하세요 ></span>
+                <span>FAQ | 이용안내</span>
             </div>
-
+    
             <!-- 탭 버튼들 -->
             <div class="tab-header">
-                <button id="playlist-tab" class="tab-button active">재생목록 (7)</button>
+                <button id="playlist-tab" class="tab-button active">재생목록 (2)</button>
                 <button id="my-music-tab" class="tab-button">마이뮤직</button>
             </div>
-
+    
             <!-- 재생목록 -->
             <div id="playlist-content" class="tab-content active">
+                <div class="playlist-controls">
+                    <button>중복곡 삭제</button>
+                    <button>재생목록 동기화</button>
+                    <select>
+                        <option>추가순</option>
+                    </select>
+                </div>
                 <ul class="playlist" id="playlist">
-                    <!-- Mock 데이터가 동적으로 여기에 추가됨 -->
+                    <li>
+                        <input type="checkbox">
+                        <div>
+                            <p>HAPPY</p>
+                            <p>DAY6 (데이식스)</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox">
+                        <div>
+                            <p>HAPPY</p>
+                            <p>DAY6 (데이식스)</p>
+                        </div>
+                    </li>
                 </ul>
                 <div class="playlist-footer">
                     <button>담기</button>
+                    <button>다운</button>
                     <button>삭제</button>
-                    <p id="song-count">0곡 / 1곡</p>
+                    <div class="footer-pagination">
+                        <p>0곡 / 2곡</p>
+                    </div>
                 </div>
             </div>
 
@@ -152,7 +174,7 @@
             myMusicContent.classList.add('active');
             playlistContent.classList.remove('active');
         });
-    
+
         // 음량 슬라이더 변경 시
         volumeSlider.addEventListener('input', function () {
             audioPlayer.volume = volumeSlider.value;
