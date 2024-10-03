@@ -1,8 +1,7 @@
-@charset "utf-8"; 
+@charset "utf-8";
 
 #wrap-header {
     width: 100%;
-    max-width: 940px;
     background-color: #ffffff;
     margin: 0 auto;
     /* border-bottom: 2px #d2d2d2 solid; */
@@ -26,7 +25,8 @@
 }
 
 #wrap-header .logo img {
-    width: 44px; /* 로고 크기 조절 */
+    width: 44px;
+    /* 로고 크기 조절 */
     height: auto;
     margin: 5px
 }
@@ -50,8 +50,9 @@
     height: 36px;
     border: 0;
     line-height: 0;
-    background-image: url(../images/search.png) ;
-    text-indent: -9999px; /* 텍스트 숨김 */
+    background-image: url(../images/search.png);
+    text-indent: -9999px;
+    /* 텍스트 숨김 */
     cursor: pointer;
 }
 
@@ -91,29 +92,35 @@
     color: #333;
     font-weight: bold;
 }
+
 /* 탭 관련 레이아웃 수정 */
 .tab-content {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 위와 아래를 나누어 배치 */
+    justify-content: space-between;
+    /* 위와 아래를 나누어 배치 */
     padding: 10px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    display: none; /* 기본적으로 숨김 */
+    display: none;
+    /* 기본적으로 숨김 */
 }
 
 .tab-content.active {
-    display: flex; /* 선택된 탭만 flex로 표시 */
+    display: flex;
+    /* 선택된 탭만 flex로 표시 */
 }
 
 /* 리스트 부분에 스크롤 적용 */
 .playlist {
-    flex-grow: 1; /* 스크롤 가능 영역을 확장 */
+    flex-grow: 1;
+    /* 스크롤 가능 영역을 확장 */
     list-style: none;
     padding: 0;
     margin: 0;
-    overflow-y: auto; /* 스크롤이 생기도록 */
+    overflow-y: auto;
+    /* 스크롤이 생기도록 */
 }
 
 /* 푸터 부분은 항상 하단에 고정 */

@@ -28,7 +28,7 @@ a:hover {text-decoration: none; color: #000000; }
 body{
     display: flex; /* Flexbox 사용 */
     justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
+    /*align-items: center; /* 수직 가운데 정렬 */
     height: 100vh; /* 화면 높이의 100% */
 }
 
@@ -49,13 +49,15 @@ body #wrap-main{
 }
 #wrap-body{
     position: relative;
-    width: 940px;
+    width: 100%;
+    max-width: 940px;
     /* background-color:blue; */
     margin: 0 auto;
 }
 #wrap-foot{
     width: 100%;
     /* background-color: aquamarine; */
+    margin-top: 80px;
     
 }
 #wrap-body #wrap-side{
