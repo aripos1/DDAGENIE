@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+#top-title{
+    border-bottom: 2px #dedede solid;
+}
+
+#top-title p{
+    font-size: 11px;
+    float: right;
+    /*background-color: #85cbd2;*/
+    margin-top: 18px;
+}
+
 /* ## side 프로필창 ## */
 #profile-box{
     width: 208px;
@@ -97,74 +108,32 @@
     width: 10px;
 }
 
-/* 이용권 상세내역, 취소신청 카테고리*/
-#top-title p{
-    font-size: 11px;
-    float: right;
-    /*background-color: #85cbd2;*/
-    margin-top: 18px;
-}
-#top-ct-list div{
-    background-color: darkkhaki;
-}
-
-#top-ct-list{
-    /* background-color: darkkhaki; */
-    border-top: 2px #656565 solid;
-}
-#top-ct-list li{
-    float: left;
-    border-right: 1px #656565 solid;
-    border-bottom: 1px #656565 solid;
-    text-align: center;
+/*############################*/
+#admin-all-list-title{
     font-weight: bold;
-    padding: 12px 17px;
-    margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #EAEAEA;
-}
-
-/* 해지신청표*/
-#delete-list-table{
-    border-top: 1px #D5D5D5 solid;
-    border-bottom: 1px #D5D5D5 solid;
+    font-size: 18px;
     text-align: center;
-    font-size: 13px;
-    padding-bottom: 40px;
-}
-.sy-btn-delete{
-    background-color: #ffffff;
-    padding: 2px 2px;
-    border-radius: 3px;
-    border: 1px solid rgba(216, 216, 216, 0.5);
-    font-size: 11px;
-}
-#delete-list-table td{
-    padding: 7px 0px;
-}
-#delete-list-table th{
-    border-bottom: 1px #D5D5D5 solid;
-    padding:3px 0px;
-}
-/*안내사항*/
-#guidelines-box{
-    background-color: #f9f9f9;
-    padding: 20px 20px;
-    border: 1px #D5D5D5 solid;
-    margin-top: 40px;
-}
-#guidelines-box h3{
-    color: #656565;
-}
-#guidelines-box ul{
-    list-style-type: disc;
-    padding-left: 15px;
-    padding-top: 3px;
-}
-#guidelines-box li{
-    font-size: 10px;
-    color: #656565
+    margin-top: 15px;
+    margin-bottom: 20px;
     
 }
 
+#admin-table-delete-list{
+    text-align: center;
+    margin-left: 13px;
+}
 
+#admin-table-delete-list th,td{
+    border: 1px #D5D5D5 solid;
+    padding: 5px 8px;
+}
+#admin-table-delete-list td button{
+    padding: 5px 15px;
+    background-color: #e6e6e6;
+    border: 1px #ffffff solid;
+    border-radius: 3px;
+}
+
+#admin-table-delete-list th{
+    background-color: #D5D5D5;
+}
