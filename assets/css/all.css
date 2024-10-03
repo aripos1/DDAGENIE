@@ -44,7 +44,7 @@ body #wrap-main{
     /* position: relative;  부모기준에서 조정가능하게함 */
     /* background-color: aqua; */
     padding: 5px 0px;
-    border-bottom: 2px #d2d2d2 solid;
+    /* border-bottom: 2px #d2d2d2 solid; */
     
 }
 #wrap-body{
