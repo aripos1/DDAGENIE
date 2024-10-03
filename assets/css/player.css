@@ -16,7 +16,7 @@ body {
 }
 
 .player-left {
-    flex: 2;
+    flex: 1;
     background-color: #f0e6d2;
     padding: 20px;
     display: flex;
@@ -36,8 +36,8 @@ body {
 }
 
 .album-cover {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -64,42 +64,11 @@ body {
     margin-top: 10px;
 }
 
-.controls {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.player-buttons button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.player-buttons button:hover {
-    transform: scale(1.1);
-    transition: all 0.2s ease;
-}
-
-.volume-control {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.volume-control input {
-    margin-left: 10px;
-    width: 100px;
-}
-
 .playlist-right {
     flex: 1;
     background-color: #fff;
     border-left: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
