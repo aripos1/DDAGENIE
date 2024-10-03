@@ -1,15 +1,11 @@
 /*배너 css*/
-#wrap-main {
+.banner-container{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f9f9f9;
+   
 }
 
-#wrap>.banner-container>h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
 
 .category {
     display: flex;
@@ -76,10 +72,7 @@ body {
     margin: 20px;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+
 
 table {
     width: 100%;
