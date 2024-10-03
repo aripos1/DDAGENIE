@@ -10,21 +10,45 @@
 <body>
     <div class="popup-player">
         <div class="player-left">
-            <!-- 왼쪽 플레이어 -->
-            <div id="audio-info">
-                <p>현재 재생 중: <span id="current-song">없음</span></p>
+            <!-- 로고 -->
+            <div class="logo">
+                <p>로고</p>
             </div>
+
+            <!-- 앨범 커버, 곡 제목, 가수 이름 -->
+            <div class="album-info">
+                <img src="../../assets/images/album-cover.png" alt="Album Cover" class="album-cover">
+                <h2>곡 제목</h2>
+                <p>가수 이름</p>
+                <span class="like-icon">&hearts;</span>
+            </div>
+
+            <!-- 음악 컨트롤러 -->
             <audio id="audio-player" controls>
                 <source id="audio-source" src="../../assets/musicfile/Color_Out_-_Host.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
+
+            <!-- 시간 및 컨트롤러 (재생/정지 등) -->
+            <div class="controls">
+                <div class="time-info">
+                    <span id="current-time">00:00</span>
+                    <span id="total-time">01:00</span>
+                </div>
+                <div class="player-buttons">
+                    <button class="prev-btn">⏮</button>
+                    <button class="play-btn">▶</button>
+                    <button class="next-btn">⏭</button>
+                </div>
+            </div>
+
             <!-- 음량 조절 슬라이더 -->
             <div class="volume-control">
                 <label for="volume-slider">음량:</label>
                 <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
             </div>
         </div>
-
+        
         <div class="playlist-right">
             <div class="user-info">
                 <span class="user-id">ihs*** 님</span>
@@ -40,7 +64,7 @@
             <!-- 재생목록 -->
             <div id="playlist-content" class="tab-content active">
                 <ul class="playlist" id="playlist">
-                    <li><input type="checkbox"> Sunshine In Your Eyes - Free Music</li>
+                    <!-- Mock 데이터가 동적으로 여기에 추가됨 -->
                 </ul>
                 <div class="playlist-footer">
                     <button>담기</button>
@@ -75,7 +99,7 @@
         const audioPlayer = document.getElementById('audio-player');
         const audioSource = document.getElementById('audio-source');
         const volumeSlider = document.getElementById('volume-slider');
-
+        const songCount = document.getElementById('song-count');
 
         // 음량 슬라이더 값 변경 시 실행되는 함수
         volumeSlider.addEventListener('input', function () {
@@ -99,6 +123,7 @@
                 li.innerHTML = `<input type="checkbox"> ${song.title} - ${song.artist} <button data-index="${index}" class="play-btn">재생</button>`;
                 playlist.appendChild(li);
             });
+            updateSongCount();
         }
 
         // 노래 재생
@@ -134,11 +159,6 @@
             myMusicContent.classList.add('active');
             playlistContent.classList.remove('active');
         });
-       
-        // 음량 슬라이더 변경 시
-        volumeSlider.addEventListener('input', function () {
-            audioPlayer.volume = volumeSlider.value;
-        });
 
         // URL에서 쿼리 파라미터 읽어오기
         function getQueryParam(param) {
@@ -157,9 +177,25 @@
                 audioSource.src = songUrl;
                 audioPlayer.load();
                 audioPlayer.play();
+                addSongToPlaylist(title, artist, songUrl);
             }
+
+            loadPlaylist();
         };
 
+        // 새로운 곡을 플레이리스트에 추가하는 함수
+        function addSongToPlaylist(title, artist, url) {
+            const li = document.createElement('li');
+            li.innerHTML = `<input type="checkbox"> ${title} - ${artist} <button class="play-btn">재생</button>`;
+            playlist.appendChild(li);
+            updateSongCount();
+        }
+
+        // 현재 재생목록 곡 수 업데이트
+        function updateSongCount() {
+            const songCountValue = playlist.querySelectorAll('li').length;
+            songCount.textContent = `${songCountValue}곡 / ${songs.length}곡`;
+        }
     </script>
 
 </body>
