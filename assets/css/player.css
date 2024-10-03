@@ -8,8 +8,8 @@ body {
 
 .popup-player {
     display: flex;
-    width: 700px;
-    height: 400px;
+    width: 900px;
+    height: 600px;
     border: 1px solid #3F454C; /* 짙은 그레이 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -35,11 +35,14 @@ body {
 }
 
 .album-info {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .album-cover {
-    width: 120px;
+    width: 130px;
     height: 120px;
     object-fit: cover;
     border-radius: 10px;
@@ -47,13 +50,13 @@ body {
     border: 2px solid #717578; /* 중간 그레이 */
 }
 
-.track-info h2 {
+.track-details h2 {
     font-size: 18px;
     margin: 5px 0;
     color: #E7E9E7; /* 연한 그레이 */
 }
 
-.track-info p {
+.track-details p {
     font-size: 14px;
     margin: 0;
     color: #8C999C; /* 연한 회색 */
@@ -61,7 +64,7 @@ body {
 
 .like-icon {
     font-size: 24px;
-    color: #ffffff;
+    color: #E7E9E7;
     cursor: pointer;
     margin-top: 10px;
 }
@@ -81,11 +84,6 @@ body {
     color: #E7E9E7; /* 연한 그레이 */
 }
 
-.player-buttons button:hover {
-    color: #558ABF; /* 파란색 */
-    transition: color 0.2s ease;
-}
-
 .volume-control {
     margin-top: 10px;
     display: flex;
@@ -99,10 +97,10 @@ body {
 }
 
 .playlist-right {
-    flex: 1;
-    background-color: #050609; /* 검정 */
+    flex: 2;
+    background-color: #E7E9E7; /* 연한 그레이 */
     border-left: 1px solid #3F454C; /* 짙은 그레이 */
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -111,47 +109,30 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-}
-
-.user-id {
-    font-size: 14px;
-    color: #8C999C; /* 연한 회색 */
-}
-
-.logout-btn {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 12px;
-    border-radius: 5px;
-}
-
-.logout-btn:hover {
-    background-color: #e53935;
-    transition: background-color 0.2s ease;
+    color: #050609; /* 검정 */
 }
 
 .tab-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #8C999C; /* 연한 회색 */
 }
 
 .tab-header button {
     flex: 1;
     padding: 10px;
     border: none;
-    background-color: #3F454C; /* 짙은 그레이 */
+    background-color: transparent;
     cursor: pointer;
-    color: #E7E9E7; /* 연한 그레이 */
+    color: #3F454C; /* 짙은 그레이 */
     transition: background-color 0.2s ease;
+    font-weight: bold;
 }
 
 .tab-header button.active {
     background-color: #558ABF; /* 파란색 */
-    font-weight: bold;
+    color: white;
 }
 
 .tab-header button:hover {
@@ -161,16 +142,7 @@ body {
 .tab-content {
     flex-grow: 1;
     overflow-y: auto;
-    border: 1px solid #3F454C; /* 짙은 그레이 */
     padding: 10px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.tab-content.active {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .playlist {
@@ -184,16 +156,13 @@ body {
     justify-content: space-between;
     margin-bottom: 10px;
     align-items: center;
-    color: #E7E9E7; /* 연한 그레이 */
-}
-
-.playlist li input {
-    margin-right: 10px;
+    color: #3F454C; /* 짙은 그레이 */
 }
 
 .playlist-footer {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .playlist-footer button {
@@ -206,5 +175,15 @@ body {
 
 .playlist-footer button:hover {
     background-color: #717578; /* 중간 그레이 */
-    transition: background-color 0.2s ease;
+}
+
+.footer-pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-pagination p {
+    color: #3F454C;
+    margin: 0;
 }
