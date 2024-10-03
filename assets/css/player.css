@@ -8,15 +8,16 @@ body {
     height: 400px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 1000px; /* 플레이어 너비 */
-    height: 500px; /* 플레이어 높이 */
+    width: 700px;
+    /* 플레이어 너비 */
+    height: 400px;
+    /* 플레이어 높이 */
 }
 
 .now-playing {
     font-weight: bold;
     color: #007BFF;
 }
-
 
 .player-left {
     flex: 1;
@@ -86,7 +87,29 @@ body {
 }
 
 .user-info {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-id {
+    font-size: 14px;
+    color: #333;
+}
+
+.logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
 }
 
 .playlist-header {
@@ -114,6 +137,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
 .playlist-footer button {
@@ -142,106 +166,18 @@ body {
 }
 
 .tab-content {
-    height: 300px; /* 높이를 고정, 필요에 따라 조정 */
-    overflow-y: auto; /* 내용이 넘치면 스크롤이 생기도록 설정 */
+    height: 300px;
+    /* 높이를 고정, 필요에 따라 조정 */
+    overflow-y: auto;
+    /* 내용이 넘치면 스크롤이 생기도록 설정 */
     padding: 10px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    display: none;
+    /* 기본적으로 탭 콘텐츠는 보이지 않도록 설정 */
 }
 
 .tab-content.active {
     display: block;
+    /* 선택된 탭만 표시 */
 }
-
-.user-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.user-id {
-    font-size: 14px;
-    color: #333;
-}
-
-.logout-btn {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 12px;
-    border-radius: 5px;
-}
-
-.logout-btn:hover {
-    background-color: #d32f2f;
-}
-
-/* 재생목록과 마이뮤직에 공통 적용 */
-ul.playlist {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* 스크롤이 생기지 않는 상태에서 재생목록이 너무 크지 않게 함 */
-.playlist-footer {
-    margin-top: 10px;
-}
-
-
-        /* 스크롤 고정 및 레이아웃 관련 */
-        .tab-content {
-            height: 300px; /* 높이를 고정, 필요에 따라 조정 */
-            overflow-y: auto; /* 내용이 넘치면 스크롤이 생기도록 설정 */
-            padding: 10px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-            display: none; /* 기본적으로 탭 콘텐츠는 보이지 않도록 설정 */
-        }
-
-        .tab-content.active {
-            display: block; /* 선택된 탭만 표시 */
-        }
-
-        /* 탭 버튼 스타일 */
-        .tab-header button {
-            padding: 10px;
-            border: none;
-            background-color: #f4f4f4;
-            cursor: pointer;
-        }
-
-        .tab-header button.active {
-            background-color: #ccc;
-            font-weight: bold;
-        }
-
-        /* 유저 정보 스타일 */
-        .user-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .user-id {
-            font-size: 14px;
-            color: #333;
-        }
-
-        .logout-btn {
-            background-color: #f44336;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 12px;
-            border-radius: 5px;
-        }
-
-        .logout-btn:hover {
-            background-color: #d32f2f;
-        }

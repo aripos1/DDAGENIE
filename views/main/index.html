@@ -42,7 +42,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <!--배너 (이프문 돌리기)-->
         <div id="wrap">
@@ -61,6 +60,7 @@
                             <div class="banner-caption">harry kim (해리킴)</div>
                         </a>
                     </div>
+
                     <div class="banner-item">
                         <a href="link2.html">
                             <img src="cover2.jpg" alt="김아름">
@@ -165,7 +165,9 @@
                         </td>
                         <td>
                             <div class="buttons">
-                                <button class="btn play-btn">▶ 재생</button>
+                                <button class="btn play-btn"
+                                    onclick="openPlayerPopup('BOOMERANG', '20WAVE', 'cover1.jpg', 'song1.mp3')">▶
+                                    재생</button>
                                 <button class="btn">+ 추가</button>
                                 <button class="btn">담기</button>
                                 <button class="btn">⬇ 다운</button>
@@ -176,4 +178,18 @@
             </table>
         </div>
     </div>
+
+    <script>
+        // 팝업 창 열기 함수
+        function openPlayerPopup(title, artist, cover, songUrl) {
+            const popupWidth = 735;  // 팝업 너비
+            const popupHeight = 460;  // 팝업 높이
+            const popupOptions = `width=${popupWidth},height=${popupHeight},resizable=yes,scrollbars=no`;
+            const popupUrl = `../../views/music/player.html?title=${encodeURIComponent(title)}&artist=${encodeURIComponent(artist)}&cover=${encodeURIComponent(cover)}&songUrl=${encodeURIComponent(songUrl)}`;
+            window.open(popupUrl, 'Music Player', popupOptions);
+        }
+    </script>
 </body>
+
+
+</html>

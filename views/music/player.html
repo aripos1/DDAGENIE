@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <title>Music Player</title>
     <link rel="stylesheet" href="../../assets/css/player.css">
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -18,7 +15,7 @@
                 <p>현재 재생 중: <span id="current-song">없음</span></p>
             </div>
             <audio id="audio-player" controls>
-                <source id="audio-source" src="../../assets/musicfile/Color_Out_-_Host.mp3" type="audio/mp3">
+                <source id="audio-source" src="" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
             <!-- 음량 조절 슬라이더 -->
@@ -137,19 +134,34 @@
             myMusicContent.classList.add('active');
             playlistContent.classList.remove('active');
         });
-        // 팝업 창 열기
-        function openPlayerPopup() {
-            const popupWidth = 500; // 팝업 너비
-            const popupHeight = 500; // 팝업 높이
-            const popupOptions = `width=${popupWidth},height=${popupHeight},resizable=yes,scrollbars=no`;
-            window.open('your_player_page.html', 'Music Player', popupOptions);
+       
+        // 음량 슬라이더 변경 시
+        volumeSlider.addEventListener('input', function () {
+            audioPlayer.volume = volumeSlider.value;
+        });
+
+        // URL에서 쿼리 파라미터 읽어오기
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
         }
 
+        // 페이지 로드 시 URL 파라미터로 노래 정보 설정
+        window.onload = function () {
+            const title = getQueryParam('title');
+            const artist = getQueryParam('artist');
+            const songUrl = getQueryParam('songUrl');
 
-        // 페이지 로드 시 초기화
-        loadPlaylist();
+            if (title && artist && songUrl) {
+                currentSongDisplay.textContent = `${title} - ${artist}`;
+                audioSource.src = songUrl;
+                audioPlayer.load();
+                audioPlayer.play();
+            }
+        };
+
     </script>
-    <button onclick="openPlayerPopup()">팝업 플레이어 열기</button>
+
 </body>
 
 </html>
