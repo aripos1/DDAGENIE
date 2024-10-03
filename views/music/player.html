@@ -145,7 +145,6 @@
             });
         });
 
-<<<<<<< HEAD
         myMusicTab.addEventListener('click', function () {
             myMusicTab.classList.add('active');
             playlistTab.classList.remove('active');
@@ -163,12 +162,6 @@
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
-=======
-        // 현재 재생목록 곡 수 업데이트
-        function updateSongCount() {
-            const songCountValue = playlist.querySelectorAll('li').length;
-            songCount.textContent = `${songCountValue}곡 / ${songs.length}곡`;
->>>>>>> 8c46db830bc1e51173745953228b85243c0abc42
         }
 
         // 페이지 로드 시 재생 목록 로드
