@@ -1,23 +1,25 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #2A2E24; /* 어두운 올리브 */
     margin: 0;
     padding: 0;
+    color: #E7E9E7; /* 연한 그레이 */
 }
 
 .popup-player {
     display: flex;
     width: 700px;
     height: 400px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #3F454C; /* 짙은 그레이 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     overflow: hidden;
+    background-color: #2C2A34; /* 어두운 보라색 */
 }
 
 .player-left {
     flex: 1;
-    background-color: #f0e6d2;
+    background-color: #3F454C; /* 짙은 그레이 */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -29,6 +31,7 @@ body {
     text-align: left;
     width: 100%;
     font-weight: bold;
+    color: #558ABF; /* 파란색 */
 }
 
 .album-info {
@@ -36,25 +39,24 @@ body {
 }
 
 .album-cover {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
-}
-
-.track-info {
-    text-align: center;
+    border: 2px solid #717578; /* 중간 그레이 */
 }
 
 .track-info h2 {
     font-size: 18px;
     margin: 5px 0;
+    color: #E7E9E7; /* 연한 그레이 */
 }
 
 .track-info p {
     font-size: 14px;
     margin: 0;
+    color: #8C999C; /* 연한 회색 */
 }
 
 .like-icon {
@@ -64,10 +66,42 @@ body {
     margin-top: 10px;
 }
 
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-buttons button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #E7E9E7; /* 연한 그레이 */
+}
+
+.player-buttons button:hover {
+    color: #558ABF; /* 파란색 */
+    transition: color 0.2s ease;
+}
+
+.volume-control {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.volume-control input {
+    margin-left: 10px;
+    width: 100px;
+    background-color: #6D7478; /* 어두운 회색 */
+}
+
 .playlist-right {
     flex: 1;
-    background-color: #fff;
-    border-left: 1px solid #ccc;
+    background-color: #050609; /* 검정 */
+    border-left: 1px solid #3F454C; /* 짙은 그레이 */
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -81,7 +115,7 @@ body {
 
 .user-id {
     font-size: 14px;
-    color: #333;
+    color: #8C999C; /* 연한 회색 */
 }
 
 .logout-btn {
@@ -109,24 +143,25 @@ body {
     flex: 1;
     padding: 10px;
     border: none;
-    background-color: #f0e6d2;
+    background-color: #3F454C; /* 짙은 그레이 */
     cursor: pointer;
+    color: #E7E9E7; /* 연한 그레이 */
     transition: background-color 0.2s ease;
 }
 
 .tab-header button.active {
-    background-color: #ccc;
+    background-color: #558ABF; /* 파란색 */
     font-weight: bold;
 }
 
 .tab-header button:hover {
-    background-color: #ddd;
+    background-color: #717578; /* 중간 그레이 */
 }
 
 .tab-content {
     flex-grow: 1;
     overflow-y: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #3F454C; /* 짙은 그레이 */
     padding: 10px;
     opacity: 0;
     transform: translateY(10px);
@@ -149,6 +184,7 @@ body {
     justify-content: space-between;
     margin-bottom: 10px;
     align-items: center;
+    color: #E7E9E7; /* 연한 그레이 */
 }
 
 .playlist li input {
@@ -161,7 +197,7 @@ body {
 }
 
 .playlist-footer button {
-    background-color: #007bff;
+    background-color: #558ABF; /* 파란색 */
     color: white;
     border: none;
     padding: 5px 10px;
@@ -169,6 +205,6 @@ body {
 }
 
 .playlist-footer button:hover {
-    background-color: #0056b3;
+    background-color: #717578; /* 중간 그레이 */
     transition: background-color 0.2s ease;
 }
