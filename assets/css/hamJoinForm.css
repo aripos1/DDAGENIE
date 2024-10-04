@@ -165,7 +165,10 @@
     background-color: #74a4ff; 
 }
 
+
+
 /* 푸터 스타일 */
+
 footbar ul {
     font-size: 12px;
     list-style: none;
@@ -193,6 +196,7 @@ footbar p {
     text-align: center;
     font-size: 12px;
     color: #666;
+    padding-bottom: 30px;
 }
 
 /* 로그인 폼과 광고 배너를 포함하는 컨테이너 */
