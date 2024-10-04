@@ -264,6 +264,7 @@
 #list-table th {
     background-color: #f1f1f1;
     font-weight: bold;
+    padding: 10px 0;
 }
 
 #list-table td {
