@@ -114,29 +114,63 @@
         <!-- 댓글 입력 폼 -->
         <div class="comment-form">
           <textarea class="comment-input" placeholder="댓글을 입력하세요..." maxlength="140"></textarea>
-          <button class="comment-submit-button">댓글 등록</button>
+          <button class="comment-submit-button" type="submit">댓글 등록</button>
         </div>
 
-        <!-- 기존 댓글 리스트 -->
-        <div class="comment-item">
-    <p><strong>맛있으면 짖는 개</strong> <span>2021-10-01</span></p>
-    <p>으르르르르ㅡ르를ㅇ쾅콰어코라ㅣ어라오아멍멍멍!ㅃ!!!!!!</p>
+        <div class="comment-section">
+          <div class="comment-item">
+            <p><strong>cgh***</strong> <span>2024-10-02</span> <span class="like-count">♥ 1</span></p>
+            <p>뉴진스 ♥</p>
+            <button class="reply-toggle">대댓글 보기</button>
+        
+            <!-- 대댓글 리스트 -->
+            <div class="reply-list" style="display: none;">
+              <div class="reply-item">
+                <p><strong>ㅇㄱㄹ</strong> <span>2024-09-29</span> <span class="like-count">♥ 2</span></p>
+                <p>새로운 청바지의 위력 ㄷㄷ;;</p>
+              </div>
+              <div class="reply-item">
+                <p><strong>int***</strong> <span>2024-09-29</span> <span class="like-count">♥ 1</span></p>
+                <p>인정</p>
+              </div>
+            </div>
+        
+            <!-- 대댓글 작성 폼 -->
+            <div class="reply-form" style="display: none;">
+              <textarea class="reply-input" placeholder="대댓글을 입력하세요..."></textarea>
+              <button class="reply-submit">대댓글 등록</button>
+            </div>
+          </div>
         </div>
-    <!-- 대댓글 리스트 -->
-    <div class="reply-item">
-        <p><strong>대댓글 작성자</strong> <span>2021-10-02</span></p>
-        <p>대댓글 내용입니다!</p>
-    </div>
-    
-    <!-- 대댓글 작성 폼 -->
-    <div class="reply-form">
-        <textarea placeholder="대댓글을 입력하세요..."></textarea>
-        <button type="submit">댓글 달기</button>
-    </div>
-</div>
       </div>
     </div>
   </div>
+  </div>
+ <script>
+    // 대댓글 보기/숨기기 토글
+    const replyToggleButtons = document.querySelectorAll('.reply-toggle');
+    replyToggleButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const replyList = this.nextElementSibling;
+        const replyForm = replyList.nextElementSibling;
+        const isDisplayed = replyList.style.display === 'block';
+        replyList.style.display = isDisplayed ? 'none' : 'block';
+        replyForm.style.display = isDisplayed ? 'none' : 'block';
+      });
+    });
+
+    // 좋아요 카운트 증가
+    const likeButton = document.querySelector('.button-like');
+    const likeCountSpan = document.getElementById('like-count');
+    let likeCount = parseInt(likeCountSpan.innerText);
+
+    likeButton.addEventListener('click', function () {
+      likeCount++;
+      likeCountSpan.innerText = likeCount;
+    });
+  </script>
+
+
 </body>
 
 </html>
