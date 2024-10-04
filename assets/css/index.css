@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /*배너 css*/
 .banner-container{
     font-family: Arial, sans-serif;
@@ -206,3 +208,32 @@ tr:hover {
     background-color: #fff; /* 호버 시 흰색으로 변경 */
   }
   
+  /*틀 잡기*/
+#wrap-main>.listhead {
+  margin-bottom: 14px;
+  border-bottom: 2px #d2d2d2 solid;
+}
+
+/* 네비게이션 Breadcrumbs 스타일 */
+#wrap-body>.listTitle {
+  display: flex;
+  align-items: center;
+}
+
+.Breadcrumbs {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 14px;
+  float: left;
+  right: 0;
+  position: absolute;
+}
+
+.Breadcrumbs li {
+  margin-right: 5px;
+}
+
+.Breadcrumbs li:last-child {
+  font-weight: bold;
+}
