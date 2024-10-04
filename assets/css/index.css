@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 /*배너 css*/
 .banner-container{
     font-family: Arial, sans-serif;
@@ -9,131 +7,115 @@
 }
 
 
-.category {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.category span {
-    cursor: pointer;
-    color: #999;
-    font-weight: bold;
-}
-
-.category .active {
-    color: #007bff;
+/* 최신 음악 배너 섹션 */
+.banner-section h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .banner-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.banner {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  justify-items: center;
 }
 
 .banner-item {
-    position: relative;
+  width: 100%;
+  max-width: 200px;
 }
 
 .banner-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.banner-caption {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+.banner-item img:hover {
+  transform: scale(1.05);
 }
 
-/*배너 페이징*/
+/* 페이지네이션 */
 .pagination {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    color: #666;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 .pagination span {
-    margin: 0 10px;
-    cursor: pointer;
+  margin: 0 10px;
+  cursor: pointer;
 }
-/*배너 사진*/
-.banner-down {
-    width: 100%;
-    text-align: center; /* 이미지들을 가운데 정렬 */
-    
-    padding: 20px;
-  }
-  
-  .banner-image {
-    display: inline-block; /* 이미지들을 한 줄에 나란히 배치 */
-    max-width: 200px; /* 이미지 크기 조정 */
-    margin: 0 10px; /* 이미지 사이 간격 */
-    border-radius: 5px; /* 이미지를 조금 둥글게 */
 
-  }
+/* 광고 배너 섹션 */
+.ad-banner {
+  margin: 30px 0;
+  text-align: center;
+}
 
+.ad-banner img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-/*음악 리스트 css*/
-
-
+/* 인기 순위 리스트 */
+.ranking-section h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 40px 0 20px;
+}
 
 .playlist {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.playno {
-    background-color: #f4f4f4;
-}
-.playsong {
-    background-color: #f4f4f4;
-}
-.playplus {
-    background-color: #f4f4f4;
-}
-
-tr:hover {
-    background-color: #f1f1f1;
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 .song-info {
-    overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .song-cover {
-    width: 50px;
-    height: 50px;
-    float: left;
-    margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 15px;
 }
 
-.song-text {
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 5px;
+.song-details {
+  display: inline-block;
 }
 
 .song-title {
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.artist {
+  font-size: 0.9em;
+  color: #777;
 }
 
 .icon-container {
@@ -208,32 +190,3 @@ tr:hover {
     background-color: #fff; /* 호버 시 흰색으로 변경 */
   }
   
-  /*틀 잡기*/
-#wrap-main>.listhead {
-  margin-bottom: 14px;
-  border-bottom: 2px #d2d2d2 solid;
-}
-
-/* 네비게이션 Breadcrumbs 스타일 */
-#wrap-body>.listTitle {
-  display: flex;
-  align-items: center;
-}
-
-.Breadcrumbs {
-  display: flex;
-  list-style-type: none;
-  padding-left: 0;
-  font-size: 14px;
-  float: left;
-  right: 0;
-  position: absolute;
-}
-
-.Breadcrumbs li {
-  margin-right: 5px;
-}
-
-.Breadcrumbs li:last-child {
-  font-weight: bold;
-}

@@ -1,192 +1,275 @@
-@charset "UTF-8";
-
 /* ## side 프로필창 ## */
-#profile-box{
+#profile-box {
     width: 208px;
     background-color: #fcfcfc;
     border: 1px solid #dedede;
     border-top: 2px solid #6bced4;
     padding-bottom: 25px;
-}
-.profile-name{
-    /* background-color: blueviolet; */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#profile-box span img{
+.profile-name {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#profile-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#profile-list ul li {
+    padding: 10px;
+    border-bottom: 1px solid #dedede;
+}
+
+#profile-list ul li:last-child {
+    border-bottom: none;
+}
+
+#profile-box span img {
     width: 74px;
     height: 74px;
-    margin-left: 15px;
-    margin-top: 10px;
+    border-radius: 50%;
     border: 1px solid #dcdcdc;
-}
-.profile-name-one{
-    /* background-color: darkgoldenrod; */
-    float: right;
-    margin-top: 18px;
-    margin-right: 38px;
-    
-}
-.profile-name-one a{
-    font-size: 12px;
+    display: block;
+    margin: 10px auto;
 }
 
-.profile-edit{
-    margin-top: 18px;
+.profile-name-one {
     text-align: center;
-    /* background-color: chartreuse; */
-    /* margin-bottom: 3%; */
+    margin-top: 10px;
 }
 
+.profile-name-one a {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+}
 
-.button-left{
+.profile-name-one a:hover {
+    text-decoration: underline;
+}
+
+.profile-edit {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.button-left, .button-right {
+    width: 40%;
+    padding: 10px;
+    font-size: 12px;
+    font-family: '굴림';
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.button-left {
     background-color: #6bced4;
+    color: white;
     border: 1px solid #61BDC6;
-    border-right-color: #85cbd2;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    display: inline-block;
-    width: 42%;
-}
-.button-left span{
-    color: azure;
-    font-size: 12px;
-    font-family: '굴림';
-    
-}
-.button-right{
-    /* margin-left: 1px; */
-    border: 1px solid #e07065;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background-color: #f38175;
-    display: inline-block;
-    width: 42%;
-}
-.button-right span{
-    color: azure;
-    font-size: 12px;
-    font-family: '굴림';
 }
 
-/* ## side 리스트창 ##*/
-#profile-list{
-    /* background-color: #e07065; */
+.button-left:hover {
+    background-color: #5bb5bc;
+}
+
+.button-right {
+    background-color: #f38175;
+    color: white;
+    border: 1px solid #e07065;
+}
+
+.button-right:hover {
+    background-color: #e06358;
+}
+
+/* ## side 리스트창 ## */
+#profile-list {
     width: 208px;
     background-color: #fcfcfc;
     border: 1px solid #dedede;
-    margin-top: 3px;
-    padding-bottom: 7px;
-    padding-top: 7px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px 0;
 }
-#profile-list span{
+
+#profile-list span {
     font-size: 15px;
-    padding-left: 5px;
+    padding-left: 10px;
     font-weight: bold;
-    padding-top: 8px;
 }
-#profile-list div ul{
-    margin-top: 3px;
+
+#profile-list div ul {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
 }
-#profile-list div ul li{
+
+#profile-list div ul li {
     font-size: 13px;
-    padding-left: 15px;
-    padding-top: 3px;
-    
-}
-#profile-list div ul li img{
-    width: 10px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-/* 이용권 상세내역, 취소신청 카테고리*/
-#top-title p{
-    font-size: 11px;
+#profile-list div ul li:last-child {
+    border-bottom: none;
+}
+
+#profile-list div ul li img {
+    width: 12px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* 이용권 상세내역, 취소신청 카테고리 */
+#top-title {
+    margin-bottom: 10px;
+}
+
+#top-title p {
+    font-size: 12px;
+    color: #888;
     float: right;
-    /*background-color: #85cbd2;*/
-    margin-top: 18px;
-}
-#top-ct-list div{
-    background-color: darkkhaki;
-}
-
-#top-ct-list{
-    /* background-color: darkkhaki; */
-    border-top: 2px #656565 solid;
-}
-#top-ct-list li{
-    float: left;
-    border-right: 1px #D5D5D5 solid;
-    border-bottom: 1px #D5D5D5 solid;
-    text-align: center;
-    font-weight: bold;
-    padding: 12px 17px;
-    margin-bottom: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-}
-
-/* 이용권 */
-#date-box{
-    /* background-color: #4690f6; */
-    padding-bottom: 30px;
     margin-top: 10px;
 }
-#date-coupon{
-    /* background-color: blueviolet; */
-    width: 330px;
-    /* margin-left: 10px; */
-    border-right: 2px #D5D5D5 solid;
-    border-left: 2px #D5D5D5 solid;
-    border-bottom: 3px #747474 solid;
-    height: 120px;
+
+/* ul의 기본 패딩 및 마진 제거 */
+/* ul에 flexbox 적용 */
+#top-ct-list ul {
+    display: flex; /* flexbox로 ul 내부 li를 가로로 배치 */
+    justify-content: space-between; /* li 간 간격을 균등하게 배치 */
+    list-style: none; /* 기본 ul 스타일 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    margin: 0; /* 기본 마진 제거 */
 }
-#date-box #coupon-title{
-    background-color: #747474;
-    height: 23px;
+
+/* li 스타일 */
+#top-ct-list ul li {
+    flex: 1; /* 각 li가 동일한 비율로 배치되도록 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    font-weight: bold;
+    padding: 12px;
+    background-color: #f9f9f9;
+    margin-right: 10px; /* li 간격 설정 */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* 마지막 li의 오른쪽 간격 제거 */
+#top-ct-list ul li:last-child {
+    margin-right: 0;
+}
+
+/* li hover 시 색상 변경 */
+#top-ct-list ul li:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* li 내부 a 태그 */
+#top-ct-list ul li a {
+    display: block; /* a 태그가 li 전체를 차지하게 설정 */
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+/* 이용권 */
+#date-box {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+#date-coupon {
+    width: 330px;
+    border: 2px solid #d5d5d5;
+    border-radius: 10px;
     text-align: center;
-    padding: 5px 0px;
-    color: #EAEAEA;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#coupon-title {
+    background-color: #747474;
+    color: white;
+    padding: 8px;
+    border-radius: 5px 5px 0 0;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
 }
 
-#date-coupon #coupon-count{
-    text-align: center;
-    padding-top: 18px;
+#coupon-count {
+    padding-top: 20px;
 }
-#date-coupon #coupon-count span{
+
+#coupon-count span {
     color: #e10000;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
 }
-#date-coupon #coupon-count p{
-    font-size: 13px;
-    border: 1px #656565 solid;
-    width: 130px;
-    padding: 3px 5px;
-    margin: 7px 0px  0px 93px;
-    border-radius: 3px;
-}
-/*이용권 구매내역 타이틀 */
-#sy-goods-list-box{
-    /* background-color: #85cbd2; */
-    padding-bottom: 22px;
-    padding-top: 10px;
 
-}
-#sy-goods-list-table #list-table{
-    /* border-top: 1px #999 solid; */
-    border-top: 1px #D5D5D5 solid;
-    border-bottom: 1px #D5D5D5 solid;
+#coupon-count p {
     font-size: 13px;
-    margin-bottom: 50px;
-}
-#sy-goods-list-table #list-table th{
-    border-bottom: 1px #D5D5D5 solid;
-    padding:3px 0px;
-    
-}
-#sy-goods-list-table #list-table td{
+    border: 1px solid #656565;
+    width: 150px;
+    padding: 5px;
+    margin: 15px auto 0;
+    border-radius: 5px;
     text-align: center;
-    padding: 5px 0px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
 }
 
+#coupon-count p:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 이용권 구매내역 타이틀 */
+#sy-goods-list-box h3 {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#sy-goods-list-table {
+    margin-top: 20px;
+}
+
+#list-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#list-table th, #list-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#list-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+#list-table td {
+    background-color: #fff;
+}
+
+#list-table tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
