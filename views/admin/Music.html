@@ -1,134 +1,123 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="KO">
 <head>
     <meta charset="UTF-8">
-    <title>adminpage</title>
-    <link rel="stylesheet" href="../../assets/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../../assets/css/all.css" rel="stylesheet">
+    <link href="../../assets/css/payment-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/admin.css">
+
 </head>
 <body>
-
-    <div id="wrap">
-
+    <div id="wrap-main">
         
-        <!-- {/* //header */} -->
-
-
-        
-
-        <div id="nav">
-            
-            <h4>관리자님 출근하세요*^^*</h4>
-
+        <div id="wrap-head">
+            <ul>
+                <li>헤더헤더헤더헤더헤더헤더헤더헤더</li>
+                <li>헤더헤더헤더헤더헤더헤더헤더헤더</li>
+            </ul>
         </div>
-        <!-- {/* //nav */} -->
+        <div id="wrap-body" class="clearfix">
+            <div id="wrap-side">
 
-
-
-
-        <div id="container" class="clearfix">
-            <div id="aside">
-
-                <div>유저인포?</div>
-
-                <ul>
-                    <li>
-                        <div>유저인포?</div>
-                    </li>
-                    <li><Link to="" rel="noreferrer noopener">음원관리</Link></li>
-                    <li><Link to="" rel="noreferrer noopener">결제관리</Link></li>
-                </ul>
-            </div>
-            <!-- {/* //aside */} -->
-
-            <div id="content">
-
-                <div id="content-head">
-                    <h3>음원리스트</h3>
-                    <div className="clear"></div>
-                </div>
-                <!-- {/* //content-head */} -->
-
-
-
-                <div id="board">
-                    <div id="list">
-                        <form action="" method="">
-                            
-                            <div className="form-group text-right">
-                                <input type="text" />
-                                <button type="submit" id="btn_search">검색</button>
-                                
-                                <button type="submit" id="btn_insert"><Link to='' className="btn_s">음원등록</button>
-                            </div>
-
-
-                        </form>
-
-                        <table >
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>음원제목</th>
-                                    <th>아티스트</th>
-                                    <th>장르</th>
-                                    <th>발매일</th>
-                                    <th>재생시간</th>
-                                    <th>수정</th>
-                                    <th>삭제</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr>
-                                    <td>번호</td>
-                                    <td>음원제목</td>
-                                    <td>아티스트</td>
-                                    <td>장르</td>
-                                    <td>발매일</td>
-                                    <td>재생시간</td>
-                                    <td>수정</td>
-                                    <td>삭제</td>
-                                </tr>
-                              
-
-
-                            </tbody>        
-                                    
-                                    
-
-                        </table>
-
-            
-                        <div id="paging">
-                            <ul>
-                                <li className="active"><Link to="" rel="noreferrer noopener">페이징?</Link></li>
-                            </ul>
-                            
-                            
-                            <div className="clear"></div>
+                <div id="profile-box" >
+                    <div class="profile-name" >
+                        <span>
+                            <img src="../../assets/images/공포 루피.jfif">
+                        </span>
+                        <div class="profile-name-one">
+                            <p><a href="#"><strong>관리자</strong> 님</a></p>
                         </div>
-                    
                     </div>
-                    <!-- {/* //list */} -->
+                    <div class="profile-edit">
+                        <a href="#" class="button-left"><span>곡 관리</span></a>
+                        <a href="#" class="button-right"><span>이용권 관리</span></a>
+                    </div>
                 </div>
-                <!-- {/* //board */} -->
+                <!-- /프로필 -->
+                <!-- 마이뮤직 리스트-->
+                <div id="profile-list">
+                    <a>
+                        <span>관리자 페이지</span>
+                    </a>
+                    <div>
+                        <ul>
+                            <li><a href="#"><img src="../../assets/images/search.png"> 음원 관리</a></li>
+                            <li><a href="#"><img src="../../assets/images/search.png"> 결제 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /마이뮤직 리스트-->
             </div>
-            <!-- {/* //content  */} -->
+            <div id="wrap-main">
+                <div id="top-title">
+                    <h2>음원리스트</h2>
+                </div>
 
+                <div class="container">
+                    <div class="header">
+                        <input type="text" id="search" placeholder="검색할 내용을 입력하세요">
+                        <button type="submit" id="btn_search">검색</button>
+
+                        <button type="submit" id="btn_insert"><Link to='' className="btn_s">음원등록</button>
+                    </div>
+            
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>제목</th>
+                                <th>아티스트(가수)</th>
+                                <th>앨범</th>
+                                <th>장르</th>
+                                <th>발매일</th>
+                                <th>재생 시간</th>
+                                <th>수정</th>
+                                <th>삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Example Song 1</td>
+                                <td>Artist 1</td>
+                                <td>Album 1</td>
+                                <td>Pop</td>
+                                <td>2024-09-20</td>
+                                <td>3:45</td>
+                                <td><a href="/edit-song/1" class="action-btn">수정</a></td>
+                                <td><a href="/delete-song/1" class="action-btn delete-btn">삭제</a></td>
+                            </tr>
+                            <tr>
+                                <td>Example Song 2</td>
+                                <td>Artist 2</td>
+                                <td>Album 2</td>
+                                <td>Rock</td>
+                                <td>2024-08-15</td>
+                                <td>4:12</td>
+                                <td><a href="/edit-song/2" class="action-btn">수정</a></td>
+                                <td><a href="/delete-song/2" class="action-btn delete-btn">삭제</a></td>
+                            </tr>
+                            <tr>
+                                <td>Example Song 3</td>
+                                <td>Artist 3</td>
+                                <td>Album 3</td>
+                                <td>Jazz</td>
+                                <td>2024-10-01</td>
+                                <td>5:01</td>
+                                <td><a href="/edit-song/3" class="action-btn">수정</a></td>
+                                <td><a href="/delete-song/3" class="action-btn delete-btn">삭제</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <!-- {/* //container  */} -->
+        <div id="wrap-foot">
+            
+            <div>푸터푸터푸터푸터푸터</div>
+        </div>
 
-
-        <Footer >
-        <!-- {/* //footer */} -->
     </div>
-    <!-- {/* //wrap */} -->
-
-
-
-
     
 </body>
 </html>
