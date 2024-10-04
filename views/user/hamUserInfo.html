@@ -118,21 +118,33 @@
                                 <tr>
                                     <th>휴대폰 번호</th>
                                     <td>
-                                        <input type="text" id="phone" name="phone" value="010-1234-5678" required>
+                                        <input type="text" id="phone" name="phone" value="" placeholder="010-1234-5678">
                                         <button type="button" class="change-btn">변경하기</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>이메일 주소</th>
                                     <td>
-                                        <input type="email" id="email" name="email" value="jji@example.com" required>
+                                        <input type="text" id="email_id" placeholder="이메일 아이디" required>
+                                        @
+                                        <input type="text" id="email_domain" list="email_domains" placeholder="직접 입력"
+                                            required>
+                                        <datalist id="email_domains">
+                                            <option value="naver.com">
+                                            <option value="gmail.com">
+                                            <option value="kakao.com">
+                                            <option value="daum.net">
+                                            <option value="hanmail.net">
+                                            <option value="nate.com">
+                                        </datalist>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>주소</th>
                                     <td>
-                                        <input type="text" id="address" name="address" value="서울시 강남구" required>
-                                        <button type="button" id="findcode">우편번호 찾기</button>
+                                        <input type="text" id="postalcode" name="postalcode" value="" placeholder="07432">
+                                        <button type="button" id="findpostalcode">우편번호 찾기</button>
+                                        <input type="text" id="address" name="address" value="" placeholder="서울시 강남구" >
                                     </td>
                                 </tr>
                             </thead>
