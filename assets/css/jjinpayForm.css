@@ -17,12 +17,13 @@
 #smart-music-listen #pay-total-list{
     text-align: center;
     margin: 0px auto;
-    margin-top: 20px;
+    margin-top: 40px;
     border: 2px #cacad0 solid;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 #smart-music-listen #pay-total-list td{
-    padding: 15px 0px;
+    padding: 8px 0px;
 }
 
 #smart-music-listen #pay-total-list .tb-total{
@@ -35,12 +36,17 @@
 /*테이블별 글꼴*/
 #smart-music-listen #pay-total-list .tb-one{
     color: black;
+    text-align: left;
+    
 }
 #smart-music-listen #pay-total-list .tb-two{
     color: rgb(255, 0, 0);
+    text-align: left;
 }
 #smart-music-listen #pay-total-list .tb-three{
     color: rgb(33, 33, 255);
+    text-align: left;
+    
 }
 
 /*금액모음*/
@@ -56,15 +62,60 @@
     font-weight: bold;
     font-size: 20px;
 }
+#smart-music-listen #pay-total-list .pay-three-one{
+    border-top: 1px #cacad0 solid;
+}
+#smart-music-listen #pay-total-list .pay-three-two{
+    border-top: 1px #cacad0 solid;
+}
+/*금액 이름 모음*/
+#smart-music-listen #pay-total-list .pay-one-one{
+    padding-left: 20px;
+}
+#smart-music-listen #pay-total-list .pay-two-one{
+    padding-left: 20px;
+}
+#smart-music-listen #pay-total-list .pay-three-one{
+    padding-left: 20px;
+}
+
 
 /*결제버튼*/
 #total-price-btn{
     padding: 10px 60px;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 25px;
     background-color: rgb(37, 146, 255);
     border: none;
     border-radius: 3px;
     color: azure;
     margin-left: 370px;
+}
+
+/*결제수단선택*/
+#pay-choose-box{
+    border: 2px #cacad0 solid;
+    width: 405px;
+    margin: 0px auto;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+#pay-choose-box p{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 15px;
+    border-bottom: 1px #cacad0 solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+#pay-choose-radio-box{
+    padding-left: 30px;
+    /* background-color: blue; */
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+#pay-choose-radio-box input{
+    margin-right: 5px;
 }
