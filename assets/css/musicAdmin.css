@@ -34,10 +34,54 @@ body {
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+.header input[type="button"] {
+	border: none;
+	border-radius: 5px;
+	background-color: #4CAF50;
+	padding: 10px 20px;
+	color: white;
+	float: right;
+	cursor: pointer;
+}
+
 .header button:hover {
 	background-color: #45a049;
 }
+
+
 table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table>thead>tr {
+    border-top: 2px solid #808080; 
+    border-bottom: 2px solid #808080;
+    background-color: #DDDDDD; 
+    padding: 0px;
+}
+
+
+table>thead>tr>th {
+    padding: 10px 0px 10px 0px;
+    font-weight: bold; 
+}
+
+table>tbody>tr { 
+    border-bottom: 1px solid #808080;
+}
+
+table>tbody>tr:hover { 
+	background-color: #cbf77b; 
+}
+
+table>tbody>tr>td {
+    padding: 10px 0px 10px 0px;
+	text-align: center;
+}
+
+/* table {
 	width: 100%;
 	border-collapse: collapse;
 }
@@ -50,7 +94,12 @@ th, td {
 }
 th {
 	background-color: #f2f2f2;
-}
+} */
+
+
+
+
+
 .action-btn {
 	background-color: #008CBA;
 	color: white;
