@@ -37,12 +37,22 @@
     font-size: 13px;
     padding-bottom: 40px;
 }
+/*줄 칸색*/
+table tbody tr{
+    background-color: #f4f4f4;
+}
+.not-background{
+    background-color: #ffffff;
+}
 .sy-btn-delete{
     background-color: #ffffff;
-    padding: 2px 2px;
+    width: 90px;
+    padding: 4px 2px;
     border-radius: 3px;
     border: 1px solid rgba(216, 216, 216, 0.5);
-    font-size: 11px;
+    font-size: 13px;
+    transform: scale(0.95); /* 눌렸을 때 약간 작아지게 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
 }
 #delete-list-table td{
     padding: 7px 0px;
@@ -50,6 +60,8 @@
 #delete-list-table th{
     border-bottom: 1px #D5D5D5 solid;
     padding:3px 0px;
+    font-weight: bold;
+    font-size: 14px;
 }
 /*안내사항*/
 #guidelines-box{
