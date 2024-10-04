@@ -94,8 +94,17 @@
                 <div id="top-ct-list">
                     <ul>
                         <li><a href="#">기본정보 변경</a></li>
-                        <li><a href="#">회원 탈퇴</a></li>
-                        
+                        <li><a href="#" id="deleteAccountButton">회원 탈퇴</a></li>
+
+                        <!-- 커스텀 확인 팝업 -->
+                        <div id="custom-confirm" class="custom-confirm hidden">
+                            <div class="confirm-content">
+                                <p>정말 탈퇴 하시겠습니까?</p>
+                                <button id="confirm-yes" class="confirm-btn">확인</button>
+                                <button id="confirm-no" class="confirm-btn">취소</button>
+                            </div>
+                        </div>
+
                     </ul>
                 </div>
                 <div id="wrap-maincontent">
@@ -117,7 +126,6 @@
                                     <th>이메일 주소</th>
                                     <td>
                                         <input type="email" id="email" name="email" value="jji@example.com" required>
-                                        <button type="button" class="email-verify-btn">이메일 인증하기</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -177,6 +185,31 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById("deleteAccountButton").addEventListener("click", function (event) {
+            event.preventDefault();  // 기본 링크 동작 방지
+            document.getElementById("custom-confirm").classList.remove("hidden");
+        });
+
+        document.getElementById("confirm-yes").addEventListener("click", function () {
+            // 탈퇴 처리 로직 (AJAX 요청 또는 form 제출)
+            var form = document.createElement("form");
+            form.method = "POST";
+            form.action = "/deleteAccount";  // 실제 탈퇴 처리 URL
+            document.body.appendChild(form);
+            form.submit();  // 탈퇴 요청 제출
+
+            // 탈퇴 후 리다이렉트
+            window.location.href = "/home";  // 홈으로 이동
+        });
+
+        document.getElementById("confirm-no").addEventListener("click", function () {
+            // 팝업 닫기
+            document.getElementById("custom-confirm").classList.add("hidden");
+        });
+
+    </script>
+
 </body>
 
 </html>
