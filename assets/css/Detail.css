@@ -174,7 +174,7 @@
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  margin-top: 5px; /* 기존 10px에서 5px로 수정 */
+  margin-top: 5px; 
   float: right; /* 오른쪽으로 이동 */
   position: relative; /* 위치를 조정하기 위해 추가 */
   top: -40px; /* 위로 이동하기 위해 추가 */
