@@ -94,13 +94,15 @@ body {
 
 .like-icon {
     font-size: 40px;
-    color: #E7E9E7; /* 기본 색 */
+    color: #E7E9E7;
+    /* 기본 색 */
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .like-icon.liked {
-    color: red; /* 좋아요 클릭 시 빨간색으로 변경 */
+    color: red;
+    /* 좋아요 클릭 시 빨간색으로 변경 */
 }
 
 
@@ -133,23 +135,23 @@ body {
     /* 어두운 회색 */
 }
 
+
+/* 재생목록 및 마이뮤직 스타일 유지 */
 .playlist-right {
     flex: 1;
-    background-color: #E7E9E7;
-    /* 연한 그레이 */
+    padding: 10px;
+    background-color: #fcfffc;
     border-left: 1px solid #3F454C;
-    /* 짙은 그레이 */
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 95%;
     position: relative;
-    padding: 10px 5px 0px 5px;
 }
 
 .user-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #050609;
     /* 검정 */
 }
@@ -157,32 +159,29 @@ body {
 .tab-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     border-bottom: 2px solid #8C999C;
     /* 연한 회색 */
 }
 
 .tab-header button {
     flex: 1;
-    padding: 10px;
+    padding: 12px;
+    font-size: 14px;
     border: none;
     background-color: transparent;
-    cursor: pointer;
-    color: #3F454C;
-    /* 짙은 그레이 */
-    transition: background-color 0.2s ease;
+    color: #007AFF;
     font-weight: bold;
+    border-bottom: 2px solid transparent;
 }
 
 .tab-header button.active {
-    background-color: #558ABF;
-    /* 파란색 */
-    color: white;
+    color: #007AFF;
+    border-bottom: 2px solid #007AFF;
 }
 
 .tab-header button:hover {
-    background-color: #717578;
-    /* 중간 그레이 */
+    background-color: #E5E5EA;
 }
 
 .tab-content {
@@ -199,27 +198,45 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    max-height: 200px;
+    /* 최대 높이를 설정 */
+    overflow-y: auto;
+    /* 높이를 넘으면 스크롤 표시 */
+    border: 1px solid #E0E0E5;
+    border-radius: 8px;
 }
 
 .playlist-controls {
     margin-bottom: 15px;
 }
 
-.playlist-content {
+.playlist-content, #my-music-content {
     flex-grow: 1;
-
     padding: 10px;
 
 }
 
-.playlist li {
+.playlist li, #my-music li {
     display: flex;
     justify-content: space-between;
+    padding: 5px 5px;
+    background-color: white;
+    border-radius: 5px;
     margin-bottom: 10px;
-    align-items: left;
-    color: #3F454C;
-    /* 짙은 그레이 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+    color: #000;
 }
+
+.playlist li:last-child {
+    border-bottom: none;
+}
+
+.playlist li:hover,
+#my-music li:hover {
+    background-color: #F2F2F7;
+}
+
 
 .playlist-footer,
 .my-music-footer {
@@ -233,18 +250,18 @@ body {
 
 .playlist-footer button,
 .my-music-footer button {
-    background-color: #558ABF;
+    background-color: #007AFF;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-right: 10px;
-    border-radius: 3px;
+    transition: background-color 0.2s ease;
 }
 
 .playlist-footer button:hover,
 .my-music-footer button:hover {
-    background-color: #717578;
+    background-color: #005FCC;
 }
 
 .footer-pagination {
@@ -263,4 +280,25 @@ ul#my-music li {
     display: block;
     text-align: left;
     padding: 5px 0;
+}
+
+
+
+/* 스크롤바 스타일을 조정하고 싶다면 */
+.playlist::-webkit-scrollbar,
+#my-music::-webkit-scrollbar {
+    width: 8px;
+    /* 스크롤바 너비 */
+}
+
+.playlist::-webkit-scrollbar-thumb,
+#my-music::-webkit-scrollbar-thumb {
+    background-color: #558ABF;
+    /* 스크롤바 색상 */
+    border-radius: 10px;
+}
+
+.playlist::-webkit-scrollbar-track,
+#my-music::-webkit-scrollbar-track {
+    background-color: #E0E0E5;
 }
