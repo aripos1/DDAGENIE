@@ -12,9 +12,9 @@
 <body>
     <div id="wrap-main">
         <!-- 헤더 -->
-        <header id="join-header">
+        <header id="headerbar">
             <div class="logo">
-                <img src="../../assets/images/logo.webp" alt="Ddagenie 로고">
+                <img src="../../assets/images/cuteddagenie.png" alt="Ddagenie 로고">
             </div>
             <nav class="join-nav">
                 <ul>
@@ -73,11 +73,20 @@
                             <button type="button" class="joinchk-btn">인증번호 받기</button>
                         </div>
                     </div>
+                    
+                    <!-- 약관 동의 -->    
+                    <div class="joinform-group">
+                        <li id="agree">
+                            <input id="tos" type="checkbox" name="agree">
+                            <label for="tos">서비스 약관에 동의합니다.</label>
+                        </li>
+                    </div>
 
                     <!-- 가입하기 버튼 -->
                     <div class="joinform-group">
                         <button type="submit" class="joinsubmit-btn">가입하기</button>
                     </div>
+                    
                 </form>
             </div>
             <footbar>

@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+#wrap-maincontent {
+    width: 694px;
+
+    margin-top: 20px;
+} 
+
+/* 네비게이션 Breadcrumbs 스타일 */
+.userinfotitle {
+    display: flex;
+    align-items: center;
+}
+
+.Breadcrumbs {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 14px;
+    float: left;
+    right: 0;
+    position: absolute;
+}
+
+.Breadcrumbs li {
+    margin-right: 5px;
+}
+
+.Breadcrumbs li:last-child {
+    font-weight: bold;
+}
+
+
+/* info table 스타일 */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: solid 2px #000000;
+}
+
+.info-table>thead>tr {
+    height: 100px;
+}
+
+.info-table>thead>tr>td>input {
+    padding: 3px 10px 4px;
+    height: 15px;
+    border-radius: 4px;
+    line-height: 15px;
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #babcbd #d9d9d9 #d9d9d9 #babcbd;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .05);
+}
+
+.info-table th, .info-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.info-table th {
+    width: 30%;
+    text-align: left;
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.info-table td {
+    text-align: left;
+    background-color: #fff;
+}
+
+.change-btn, .email-verify-btn, #findcode {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #5F95F7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.change-btn:hover, .email-verify-btn:hover, #findcode:hover {
+    background-color: #4a7bc1;
+}
+
+.profile-photo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.profile-photo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+}
+
+.submit-section {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn-submit, .btn-cancel {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5F95F7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.btn-cancel {
+    background-color: #ccc;
+}
+
+.btn-submit:hover {
+    background-color: #4a7bc1;
+}
+
+.btn-cancel:hover {
+    background-color: #999;
+}
