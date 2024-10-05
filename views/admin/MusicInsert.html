@@ -9,7 +9,7 @@
     <link href="../../assets/css/footer.css" rel="stylesheet">
 
     <link href="../../assets/css/jjinUtilize.css" rel="stylesheet">
-    <link href="../../assets/css/musicInsert.css" rel="stylesheet">
+    <link href="../../assets/css/musicAdmin.css" rel="stylesheet">
 
 </head>
 <body>
@@ -93,41 +93,52 @@
                 <!-- /마이뮤직 리스트-->
             </div>
             <div id="wrap-main">
+
                 <div id="top-title">
                     <h2>음원 등록</h2>
                 </div>
 
-                <div class="container">
-                    <form action="/submit-song" method="POST" enctype="multipart/form-data">
-                        <label for="title">음원 제목</label>
-                        <input type="text" id="title" name="title" placeholder="음원 제목을 입력하세요" required>
-                        
-                        <label for="artist">아티스트(가수)</label>
-                        <input type="text" id="artist" name="artist" placeholder="아티스트(가수) 이름을 입력하세요" required>
-                        
-                        <label for="genre">장르</label>
-                        <select id="genre" name="genre" required>
-                            <option value="">장르를 선택하세요</option>
-                            <option value="Pop">Pop</option>
-                            <option value="Rock">Rock</option>
-                            <option value="HipHop">HipHop</option>
-                            <option value="Jazz">Jazz</option>
-                            <option value="Classical">Classical</option>
-                        </select>
-                        
-                        <label for="release_date">발매일</label>
-                        <input type="date" id="release_date" name="release_date" required>
-            
-                        <label for="song_link">음원 링크</label>
-                        <input type="text" id="song_link" name="song_link" placeholder="음원 링크를 입력하세요 (옵션)">
-            
-                        <label for="song_file">음원 파일 업로드</label>
-                        <input type="file" id="song_file" name="song_file" accept=".mp3,.wav,.flac" required>
-            
-                        <button type="submit">음원 등록</button>
-                        <button type="button" class="back-btn" onclick="history.back()">뒤로 가기</button>
-                    </form>
+                <div id="musicInsert">
+
+                    <div class="container">
+                        <form action="/submit-song" method="POST" enctype="multipart/form-data">
+                            <label for="title">음원 제목</label>
+                            <input type="text" id="title" name="title" placeholder="음원 제목을 입력하세요" required>
+                            
+                            <label for="artist">아티스트(가수)</label>
+                            <input type="text" id="artist" name="artist" placeholder="아티스트(가수) 이름을 입력하세요" required>
+                            
+                            <label for="genre">장르</label>
+                            <select id="genre" name="genre" required>
+                                <option value="">장르를 선택하세요</option>
+                                <option value="Pop">Pop</option>
+                                <option value="Rock">Rock</option>
+                                <option value="HipHop">HipHop</option>
+                                <option value="Jazz">Jazz</option>
+                                <option value="Classical">Classical</option>
+                            </select>
+                            
+                            <label for="release_date">발매일</label>
+                            <input type="date" id="release_date" name="release_date" required>
+                
+                            <label for="song_link">음원 링크</label>
+                            <input type="text" id="song_link" name="song_link" placeholder="음원 링크를 입력하세요 (옵션)">
+    
+                            <label for="song_">음원 소개</label>
+                            <input type="text" id="song_link" name="song_link" placeholder="음원 링크를 입력하세요 (옵션)">
+                
+    
+                            <label for="song_file">음원 파일 업로드</label>
+                            <input type="file" id="song_file" name="song_file" accept=".mp3,.wav,.flac" required>
+                
+                            <button type="submit">음원 등록</button>
+                            <button type="button" class="back-btn" onclick="history.back()">뒤로 가기</button>
+                        </form>
+                    </div>
+                    
                 </div>
+
+
             </div>
         </div>
 

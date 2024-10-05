@@ -5,12 +5,12 @@
 /* ################################################# */
 /* MusicUpdate */
 
-body {
+#musicUpdate body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 }
-.container {
+#musicUpdate .container {
 	max-width: 600px;
 	margin: 20px auto;
 	padding: 20px;
@@ -18,16 +18,16 @@ body {
 	border-radius: 5px;
 	background-color: white;
 }
-h2 {
+#musicUpdate h2 {
 	text-align: center;
 	color: #333;
 }
-label {
+#musicUpdate label {
 	font-weight: bold;
 	margin-top: 10px;
 	display: block;
 }
-input[type="text"], input[type="date"], input[type="time"], input[type="file"], select {
+#musicUpdate input[type="text"], input[type="date"], input[type="time"], input[type="file"], select {
 	width: 100%;
 	padding: 8px;
 	margin-top: 5px;
@@ -35,7 +35,7 @@ input[type="text"], input[type="date"], input[type="time"], input[type="file"], 
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
-button {
+#musicUpdate button {
 	width: 100%;
 	padding: 10px;
 	background-color: #4CAF50;
@@ -44,13 +44,13 @@ button {
 	border-radius: 5px;
 	cursor: pointer;
 }
-button:hover {
+#musicUpdate button:hover {
 	background-color: #45a049;
 }
-.back-btn {
+#musicUpdate .back-btn {
 	background-color: #555;
 	margin-top: 10px;
 }
-.back-btn:hover {
+#musicUpdate .back-btn:hover {
 	background-color: #333;
 }
